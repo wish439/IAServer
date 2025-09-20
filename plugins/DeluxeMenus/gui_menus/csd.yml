@@ -1,0 +1,70 @@
+menu_title: '&#ff88ff主城传送点菜单'
+open_command: csd
+size: 45
+items:
+  'fill':
+    display_name: "&#64ff64我&#73ff73只&#82ff82是&#91ff91一&#a0ffa0个&#afffaf分&#beffbe割&#cdffcd线&#dcffdc:&#ebffebD&#fafffa"
+    material: WHITE_STAINED_GLASS_PANE
+    slots: [0,1,2,3,4,5,6,7,8,9,17,18,26,27,35,36,37,38,39,41,42,43,44]
+  'close':
+    display_name: "&r&#db3131关闭菜单"
+    material: BARRIER
+    slot: 40
+    lore:
+      - ""
+      - "&a&l→ &e点击关闭菜单!"
+    left_click_commands:
+      - "[close]"
+      - "[sound] BLOCK_LEVER_CLICK"
+  'tp1':
+    display_name: "&r&#5577dd军机处"
+    material: DIAMOND_SWORD
+    slot: 20
+    lore:
+      - ""
+      - "&7前往军士长的办公室"
+      - "&7升级你的军衔"
+      - ""
+      - "&a&l→ &e点击前往!"
+    left_click_commands:
+      - "[player] warp junxian"
+      - "[sound] BLOCK_LEVER_CLICK"
+  'tp2':
+    display_name: "&r&#5577dd商店"
+    material: CHEST
+    slot: 21
+    lore:
+      - ""
+      - "&7前往商店"
+      - "&7在这买/卖你需要的东西"
+      - ""
+      - "&a&l→ &e点击前往!"
+    left_click_commands:
+      - "[player] warp shop"
+      - "[sound] BLOCK_LEVER_CLICK"
+  'tp3':
+    display_name: "&r&#5577dd公会大厅"
+    material: GOLD_BLOCK
+    slot: 22
+    lore:
+      - ""
+      - "&7前往公会大厅"
+      - "&7在这查看公会事项"
+      - ""
+      - "&a&l→ &e点击前往!"
+    left_click_commands:
+      - "[player] warp gonghui"
+      - "[sound] BLOCK_LEVER_CLICK"
+  'tp4':
+    display_name: "&r&#5577dd附魔室"
+    material: ENCHANTING_TABLE
+    slot: 23
+    lore:
+      - ""
+      - "&7前往附魔台"
+      - "&7免费的附魔台使用"
+      - ""
+      - "&a&l→ &e点击前往!"
+    left_click_commands:
+      - "[player] warp enchant"
+      - "[sound] BLOCK_LEVER_CLICK"

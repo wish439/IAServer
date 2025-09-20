@@ -1,0 +1,87 @@
+menu_title: '&r&#ff88ff服务器机制'
+open_command:
+  - mc
+size: 27
+items:
+  'fill':
+    display_name: "&#64ff64我&#73ff73只&#82ff82是&#91ff91一&#a0ffa0个&#afffaf分&#beffbe割&#cdffcd线&#dcffdc:&#ebffebD&#fafffa"
+    material: WHITE_STAINED_GLASS_PANE
+    slots: [0,1,2,3,4,5,6,7,8,9,17,18,19,20,21,22,23,24,25,26]
+  'back':
+    display_name: "&r&#5577dd返回主菜单"
+    material: CLOCK
+    slot: 22
+    lore:
+      - ""
+      - "&a&l→ &e点击返回主菜单!"
+    left_click_commands:
+      - "[openguimenu] menu" 
+      - "[sound] BLOCK_LEVER_CLICK"
+  'zombifiedrule':
+    display_name: "&r&#5577dd周期性单击左键"
+    material: ZOMBIFIED_PIGLIN_SPAWN_EGG
+    slot: 10
+    lore:
+      - ""
+      - "§6§l针对周期性单击左键攻击的修改"
+      - "§b因服务器内使用tweakeroo自带的周期性攻击"
+      - "§c若客户端卡顿，则会一瞬间攻击两次导致盔甲架掉落或击退" 
+      - "§a故增加了由服务端周期性攻击的功能"  
+      - "§e玩家只需要输入§6/tk [数字]§e开启周期性单击左键"  
+      - "§e再次输入§6/tk§e即可关闭"
+      - "§b左键以10的间隔攻击盔甲架"
+      - "§c右键关闭攻击"
+      - ""
+    left_click_commands:
+      - "[player] tk 10" 
+      - "[message] 你已开启攻击"
+      - "[sound] BLOCK_LEVER_CLICK"
+      - "[close]"
+    right_click_commands:
+      - "[player] tk"
+      - "[message] 你已关闭攻击"
+      - "[sound] BLOCK_LEVER_CLICK"
+      - "[close]"
+  'iron_axerule':
+    display_name: "&r&#5577dd袭击塔机制"
+    material: IRON_AXE
+    slot: 11
+    lore:
+      - ""
+      - "§6§l针对袭击塔的修改"
+      - "§b因出生麻将在1.21把袭击塔机制更改"
+      - "§c导致大部分印钞机失去作用" 
+      - "§a故还原了袭击塔机制 §eBy:Mc_Wishtoday"
+      - ""
+    left_click_commands:
+      - "[sound] BLOCK_LEVER_CLICK"
+  'quickshulker_boxrule':
+    display_name: "&r&#5577dd快捷潜影盒"
+    material: SHULKER_BOX
+    slot: 12
+    lore:
+      - ""
+      - "§6§l针对快捷潜影盒的修改"
+      - "§b因生电玩家大部分都习惯使用quickshulker模组"
+      - "§c但服务器无法使用客户端"
+      - "§a故增加了该机制 §eBy:Mc_Wishtoday"
+      - "§e玩家只需在背包或手持时右键潜影盒/工作台/潜影箱即可打开UI"
+      - "§6袭击塔机制都回调了,能快捷打开潜影盒很合理吧"
+      - ""
+    left_click_commands:
+      - "[sound] BLOCK_LEVER_CLICK"
+  'redstonerule':
+    display_name: "&r&#5577dd轻松放置协议"
+    material: REDSTONE
+    slot: 13
+    lore:
+      - ""
+      - "§6§l针对轻松放置的修改"
+      - "§b因生电玩家习惯轻松放置"
+      - "§c但服务器放置后方向性的方块无法矫正" 
+      - "§a故增加了该机制 §eBy:Mc_Wishtoday"
+      - "§e现玩家无需安装carpet即可轻松放置"
+      - "§6潜影盒都能快捷打开,轻松放置修复很合理吧"
+      - ""
+    left_click_commands:
+      - "[sound] BLOCK_LEVER_CLICK"

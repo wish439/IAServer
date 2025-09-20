@@ -1,0 +1,18 @@
+enable: true
+newPlayerActions:
+    #run_command请不要带/,vars中的run_command请带上/
+    #%player_name%即玩家名字,%player_uuid%"为玩家uuid
+  action: 
+    Type: RUN_COMMAND
+    Values:
+      - 'minecraft:execute as %player_name% run give @s golden_apple'
+  action2:
+    Type: SEND_MESSAGE
+    Values:
+      - '§%player_name% 启萌服务器欢迎您的加入'
+      - '§d§l温馨小提示'
+      - '  没加QQ群的小萌新们请加一下QQ群。'
+      - '  §c死亡不掉落§f在§e菜单§f里面可以打开噢!§7[Shift+F]打开菜单'
+      - '  在里边可以反馈bug，交流，合作。'
+      - '  任何第三方私信不要信除腐竹以外，谨慎被骗！'
+      - '   %example_json_component%   %example_json_qq%  %example_json_kook% '

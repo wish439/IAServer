@@ -1,0 +1,19 @@
+menu_title: '&#ff88ff权限菜单'
+open_command: rank
+size: 45
+items:
+  'fill':
+    display_name: "&#64ff64我&#73ff73只&#82ff82是&#91ff91一&#a0ffa0个&#afffaf分&#beffbe割&#cdffcd线&#dcffdc:&#ebffebD&#fafffa"
+    material: WHITE_STAINED_GLASS_PANE
+    slots: [0,1,2,3,4,5,6,7,8,9,17,18,26,27,35,36,37,38,39,41,42,43,44]
+  'back':
+    display_name: "&r&#5577dd返回主菜单"
+    material: CLOCK
+    slot: 40
+    lore:
+      - ""
+      - "&a&l→ &e点击返回主菜单!"
+    left_click_commands:
+      - "[openguimenu] menu" 
+      - "[sound] BLOCK_LEVER_CLICK"
+      

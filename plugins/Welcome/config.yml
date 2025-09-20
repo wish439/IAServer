@@ -1,0 +1,62 @@
+#提示信息前缀
+prompt-prefix: '&6☻'
+
+#存储配置
+storage:
+  mysql:
+    #是否使用Mysql
+    use: false
+    #连接信息
+    host: localhost
+    port: 3306
+    username: username
+    password: password
+    database: minecraft
+    parameter: 'characterEncoding=utf-8&useSSL=false&autoReconnect=true'
+    table-prefix: 'wc_'
+    #如果设置为true，下次启动自动从Yaml导入数据到Mysql
+    convert: false
+
+#全局配置
+setting:
+  #欢迎有效期（单位：秒）
+  welcome-period: 300
+  #欢迎奖励数值区间
+  welcome-reward:
+    min: 0
+    max: 0
+  #给予奖励的指令
+  reward-command: 'xp add {name} 300'
+  #关键字列表，允许玩家自行欢迎
+  keywords:
+    - 'Welcome'
+    - '欢迎'
+  #点击按钮或用指令发送的信息，需要包含关键字和{name}
+  welcome-msg:
+  - '欢迎{name}加入我们的服务器~~'
+  - '萌新{name}来了! 列队欢迎!'
+
+#提示信息
+message:
+  reload-success: '&e配置信息重载成功'
+  #欢迎语
+  welcome-notice: '&e列队欢迎新玩家&d{name}&e的到来!'
+  #发送按钮
+  send-button: '&c [点我欢迎获取奖励]'
+  #按钮提示
+  button-tips: '&e亦可发送&b{keywords}&e+玩家名进行欢迎哦!'
+  #发送奖励的通知
+  reward-notice: '&e感谢您的热情欢迎, 已向您发放&b300点&e经验奖励!'
+  #不是新玩家
+  not-newbie: '&e玩家&d{name}&e不存在或已经不是新玩家了哦!'
+  #不能欢迎自己
+  cant-self: '&e啊对对对, 自己要欢迎自己!'
+  #已经过时
+  out-dated: '&e欢迎&d{name}&e的时间段已经过了哦!'
+  #已经欢迎过
+  already-welcomed: '&e你已经欢迎过&d{name}&e了!'
+
+#帮助信息
+help:
+  welcome: '&e欢迎新玩家的到来!'
+  reload: '&e重载插件配置文件'

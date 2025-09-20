@@ -4,3 +4,4 @@ world_the_end/
 libraries/
 logs/
 versions/
+*.db

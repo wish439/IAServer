@@ -1,0 +1,372 @@
+﻿menu_title: '权限组选择菜单'
+open_command: gps
+size: 45
+items:
+  'fill':
+    display_name: "&#64ff64我&#73ff73只&#82ff82是&#91ff91一&#a0ffa0个&#afffaf分&#beffbe割&#cdffcd线&#dcffdc:&#ebffebD&#fafffa"
+    material: WHITE_STAINED_GLASS_PANE
+    slots: [0,1,2,3,4,5,6,7,8,9,17,18,26,27,35,36,37,38,39,41,42,43,44]
+  "head0":
+    material: DIAMOND
+    display_name: "%wish_LPGroup_all_0%"
+    slot: 10
+    left_click_commands:
+      - "[meta] set curcom STRING %deluxemenus_meta_curcom_STRING% %wish_LPGroup_all_0%"
+      - "[openguimenu] %deluxemenus_meta_nxgm_STRING%"
+    view_requirement: 
+      requirements:
+        yes:
+          type: "!string equals"
+          input: '%wish_LPGroup_all_0%'
+          output: ''
+        con:
+          type: "!string contains"
+          input: '%wish_LPGroup_all_0%'
+          output: '('
+  "head1":
+    material: DIAMOND
+    display_name: "%wish_LPGroup_all_1%"
+    slot: 11
+    view_requirement: 
+      requirements:
+        yes:
+          type: "!string equals"
+          input: '%wish_LPGroup_all_1%'
+          output: ''
+        con:
+          type: "!string contains"
+          input: '%wish_LPGroup_all_1%'
+          output: '('
+    left_click_commands:
+      - "[meta] set curcom STRING %deluxemenus_meta_curcom_STRING% %wish_LPGroup_all_1%"
+      - "[openguimenu] %deluxemenus_meta_nxgm_STRING%"
+  "head2":
+    material: DIAMOND
+    display_name: "%wish_LPGroup_all_2%"
+    slot: 12
+    view_requirement: 
+      requirements:
+        yes:
+          type: "!string equals"
+          input: '%wish_LPGroup_all_2%'
+          output: ''
+        con:
+          type: "!string contains"
+          input: '%wish_LPGroup_all_2%'
+          output: '('
+    left_click_commands:
+      - "[meta] set curcom STRING %deluxemenus_meta_curcom_STRING% %wish_LPGroup_all_2%"
+      - "[openguimenu] %deluxemenus_meta_nxgm_STRING%"
+  "head3":
+    material: DIAMOND
+    display_name: "%wish_LPGroup_all_3%"
+    slot: 13
+    view_requirement: 
+      requirements:
+        yes:
+          type: "!string equals"
+          input: '%wish_LPGroup_all_3%'
+          output: ''
+        con:
+          type: "!string contains"
+          input: '%wish_LPGroup_all_3%'
+          output: '('
+    left_click_commands:
+      - "[meta] set curcom STRING %deluxemenus_meta_curcom_STRING% %wish_LPGroup_all_3%"
+      - "[openguimenu] %deluxemenus_meta_nxgm_STRING%"
+  "head4":
+    material: DIAMOND
+    display_name: "%wish_LPGroup_all_4%"
+    slot: 14
+    view_requirement: 
+      requirements:
+        yes:
+          type: "!string equals"
+          input: '%wish_LPGroup_all_4%'
+          output: ''
+        con:
+          type: "!string contains"
+          input: '%wish_LPGroup_all_4%'
+          output: '('
+    left_click_commands:
+      - "[meta] set curcom STRING %deluxemenus_meta_curcom_STRING% %wish_LPGroup_all_4%"
+      - "[openguimenu] %deluxemenus_meta_nxgm_STRING%"
+  "head5":
+    material: DIAMOND
+    display_name: "%wish_LPGroup_all_5%"
+    slot: 15
+    view_requirement: 
+      requirements:
+        yes:
+          type: "!string equals"
+          input: '%wish_LPGroup_all_5%'
+          output: ''
+        con:
+          type: "!string contains"
+          input: '%wish_LPGroup_all_5%'
+          output: '('
+    left_click_commands:
+      - "[meta] set curcom STRING %deluxemenus_meta_curcom_STRING% %wish_LPGroup_all_5%"
+      - "[openguimenu] %deluxemenus_meta_nxgm_STRING%"
+  "head6":
+    material: DIAMOND
+    display_name: "%wish_LPGroup_all_6%"
+    slot: 16
+    view_requirement: 
+      requirements:
+        yes:
+          type: "!string equals"
+          input: '%wish_LPGroup_all_6%'
+          output: ''
+        con:
+          type: "!string contains"
+          input: '%wish_LPGroup_all_6%'
+          output: '('
+    left_click_commands:
+      - "[meta] set curcom STRING %deluxemenus_meta_curcom_STRING% %wish_LPGroup_all_6%"
+      - "[openguimenu] %deluxemenus_meta_nxgm_STRING%"
+  "head7":
+    material: DIAMOND
+    display_name: "%wish_LPGroup_all_7%"
+    slot: 19
+    view_requirement: 
+      requirements:
+        yes:
+          type: "!string equals"
+          input: '%wish_LPGroup_all_7%'
+          output: ''
+        con:
+          type: "!string contains"
+          input: '%wish_LPGroup_all_7%'
+          output: '('
+    left_click_commands:
+      - "[meta] set curcom STRING %deluxemenus_meta_curcom_STRING% %wish_LPGroup_all_7%"
+      - "[openguimenu] %deluxemenus_meta_nxgm_STRING%"
+  "head8":
+    material: DIAMOND
+    display_name: "%wish_LPGroup_all_8%"
+    slot: 20
+    view_requirement: 
+      requirements:
+        yes:
+          type: "!string equals"
+          input: '%wish_LPGroup_all_8%'
+          output: ''
+        con:
+          type: "!string contains"
+          input: '%wish_LPGroup_all_8%'
+          output: '('
+    left_click_commands:
+      - "[meta] set curcom STRING %deluxemenus_meta_curcom_STRING% %wish_LPGroup_all_8%"
+      - "[openguimenu] %deluxemenus_meta_nxgm_STRING%"
+  "head9":
+    material: DIAMOND
+    display_name: "%wish_LPGroup_all_9%"
+    slot: 21
+    view_requirement: 
+      requirements:
+        yes:
+          type: "!string equals"
+          input: '%wish_LPGroup_all_9%'
+          output: ''
+        con:
+          type: "!string contains"
+          input: '%wish_LPGroup_all_9%'
+          output: '('
+    left_click_commands:
+      - "[meta] set curcom STRING %deluxemenus_meta_curcom_STRING% %wish_LPGroup_all_9%"
+      - "[openguimenu] %deluxemenus_meta_nxgm_STRING%"
+  "head10":
+    material: DIAMOND
+    display_name: "%wish_LPGroup_all_10%"
+    slot: 22
+    view_requirement: 
+      requirements:
+        yes:
+          type: "!string equals"
+          input: '%wish_LPGroup_all_10%'
+          output: ''
+        con:
+          type: "!string contains"
+          input: '%wish_LPGroup_all_10%'
+          output: '('
+    left_click_commands:
+      - "[meta] set curcom STRING %deluxemenus_meta_curcom_STRING% %wish_LPGroup_all_10%"
+      - "[openguimenu] %deluxemenus_meta_nxgm_STRING%"
+  "head11":
+    material: DIAMOND
+    display_name: "%wish_LPGroup_all_11%"
+    slot: 23
+    view_requirement: 
+      requirements:
+        yes:
+          type: "!string equals"
+          input: '%wish_LPGroup_all_11%'
+          output: ''
+        con:
+          type: "!string contains"
+          input: '%wish_LPGroup_all_11%'
+          output: '('
+    left_click_commands:
+      - "[meta] set curcom STRING %deluxemenus_meta_curcom_STRING% %wish_LPGroup_all_11%"
+      - "[openguimenu] %deluxemenus_meta_nxgm_STRING%"
+  "head12":
+    material: DIAMOND
+    display_name: "%wish_LPGroup_all_12%"
+    slot: 24
+    view_requirement: 
+      requirements:
+        yes:
+          type: "!string equals"
+          input: '%wish_LPGroup_all_12%'
+          output: ''
+        con:
+          type: "!string contains"
+          input: '%wish_LPGroup_all_12%'
+          output: '('
+    left_click_commands:
+      - "[meta] set curcom STRING %deluxemenus_meta_curcom_STRING% %wish_LPGroup_all_12%"
+      - "[openguimenu] %deluxemenus_meta_nxgm_STRING%"
+  "head13":
+    material: DIAMOND
+    display_name: "%wish_LPGroup_all_13%"
+    slot: 25
+    view_requirement: 
+      requirements:
+        yes:
+          type: "!string equals"
+          input: '%wish_LPGroup_all_13%'
+          output: ''
+        con:
+          type: "!string contains"
+          input: '%wish_LPGroup_all_13%'
+          output: '('
+    left_click_commands:
+      - "[meta] set curcom STRING %deluxemenus_meta_curcom_STRING% %wish_LPGroup_all_13%"
+      - "[openguimenu] %deluxemenus_meta_nxgm_STRING%"
+  "head14":
+    material: DIAMOND
+    display_name: "%wish_LPGroup_all_14%"
+    slot: 28
+    view_requirement: 
+      requirements:
+        yes:
+          type: "!string equals"
+          input: '%wish_LPGroup_all_14%'
+          output: ''
+        con:
+          type: "!string contains"
+          input: '%wish_LPGroup_all_14%'
+          output: '('
+    left_click_commands:
+      - "[meta] set curcom STRING %deluxemenus_meta_curcom_STRING% %wish_LPGroup_all_14%"
+      - "[openguimenu] %deluxemenus_meta_nxgm_STRING%"
+  "head15":
+    material: DIAMOND
+    display_name: "%wish_LPGroup_all_15%"
+    slot: 29
+    view_requirement: 
+      requirements:
+        yes:
+          type: "!string equals"
+          input: '%wish_LPGroup_all_15%'
+          output: ''
+        con:
+          type: "!string contains"
+          input: '%wish_LPGroup_all_15%'
+          output: '('
+    left_click_commands:
+      - "[meta] set curcom STRING %deluxemenus_meta_curcom_STRING% %wish_LPGroup_all_15%"
+      - "[openguimenu] %deluxemenus_meta_nxgm_STRING%"
+  "head16":
+    material: DIAMOND
+    display_name: "%wish_LPGroup_all_16%"
+    slot: 30
+    view_requirement: 
+      requirements:
+        yes:
+          type: "!string equals"
+          input: '%wish_LPGroup_all_16%'
+          output: ''
+        con:
+          type: "!string contains"
+          input: '%wish_LPGroup_all_16%'
+          output: '('
+    left_click_commands:
+      - "[meta] set curcom STRING %deluxemenus_meta_curcom_STRING% %wish_LPGroup_all_16%"
+      - "[openguimenu] %deluxemenus_meta_nxgm_STRING%"
+  "head17":
+    material: DIAMOND
+    display_name: "%wish_LPGroup_all_17%"
+    slot: 31
+    view_requirement: 
+      requirements:
+        yes:
+          type: "!string equals"
+          input: '%wish_LPGroup_all_17%'
+          output: ''
+        con:
+          type: "!string contains"
+          input: '%wish_LPGroup_all_17%'
+          output: '('
+    left_click_commands:
+      - "[meta] set curcom STRING %deluxemenus_meta_curcom_STRING% %wish_LPGroup_all_17%"
+      - "[openguimenu] %deluxemenus_meta_nxgm_STRING%"
+  "head18":
+    material: DIAMOND
+    display_name: "%wish_LPGroup_all_18%"
+    slot: 32
+    view_requirement: 
+      requirements:
+        yes:
+          type: "!string equals"
+          input: '%wish_LPGroup_all_18%'
+          output: ''
+        con:
+          type: "!string contains"
+          input: '%wish_LPGroup_all_18%'
+          output: '('
+    left_click_commands:
+      - "[meta] set curcom STRING %deluxemenus_meta_curcom_STRING% %wish_LPGroup_all_18%"
+      - "[openguimenu] %deluxemenus_meta_nxgm_STRING%"
+  "head19":
+    material: DIAMOND
+    display_name: "%wish_LPGroup_all_19%"
+    slot: 33
+    view_requirement: 
+      requirements:
+        yes:
+          type: "!string equals"
+          input: '%wish_LPGroup_all_19%'
+          output: ''
+        con:
+          type: "!string contains"
+          input: '%wish_LPGroup_all_19%'
+          output: '('
+    left_click_commands:
+      - "[meta] set curcom STRING %deluxemenus_meta_curcom_STRING% %wish_LPGroup_all_19%"
+      - "[openguimenu] %deluxemenus_meta_nxgm_STRING%"
+  "head20":
+    material: DIAMOND
+    display_name: "%wish_LPGroup_all_20%"
+    slot: 34
+    view_requirement: 
+      requirements:
+        yes:
+          type: "!string equals"
+          input: '%wish_LPGroup_all_20%'
+          output: ''
+        con:
+          type: "!string contains"
+          input: '%wish_LPGroup_all_20%'
+          output: '('
+    left_click_commands:
+      - "[player] say %wish_LPGroup_all_20%"
+      - "[meta] set curcom STRING %deluxemenus_meta_curcom_STRING% %wish_LPGroup_all_20%"
+      - "[openguimenu] %deluxemenus_meta_nxgm_STRING%"
+  'curcom':
+    display_name: "当前命令"
+    material: OAK_SIGN
+    slot: 4
+    lore:
+      - "%deluxemenus_meta_curcom_STRING%"

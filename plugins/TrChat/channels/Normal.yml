@@ -1,0 +1,30 @@
+Options:
+  Target: ALL
+  Always-Listen: true
+
+Formats:
+  - condition: ~
+    priority: 100
+    msg:
+      default-color: '&f'
+      hover: '&7发送时间: %server_time_HH:mm:ss%'
+    prefix:
+      world:
+        text: '&7[%provinceip_city%]%luckperms_prefix%'
+        hover: |-
+        command: ''
+      part-before-player:
+        text: ' '
+      player:
+        - condition: 'player op'
+          text: '&f%player_name%'
+          hover: |-
+          suggest: ''
+        - text: '&f%player_name%'
+          hover: |-
+          suggest: ''
+      part-before-msg:
+        text: ' &7▶ &f'
+    suffix:
+      example:
+        text: ''

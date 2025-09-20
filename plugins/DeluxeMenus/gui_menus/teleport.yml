@@ -1,0 +1,130 @@
+menu_title: '&#ff88ff传送菜单'
+open_command: cs
+size: 45
+items:
+  'fill':
+    display_name: "&#64ff64我&#73ff73只&#82ff82是&#91ff91一&#a0ffa0个&#afffaf分&#beffbe割&#cdffcd线&#dcffdc:&#ebffebD&#fafffa"
+    material: WHITE_STAINED_GLASS_PANE
+    slots: [0,1,2,3,4,5,6,7,8,9,17,18,26,27,35,36,37,38,39,41,42,43,44]
+  'back':
+    display_name: "&r&#5577dd返回主菜单"
+    material: CLOCK
+    slot: 40
+    lore:
+      - ""
+      - "&a&l→ &e点击返回主菜单!"
+    left_click_commands:
+      - "[openguimenu] menu" 
+      - "[sound] BLOCK_LEVER_CLICK"
+  'lobby':
+    display_name: "&r&#5577dd回到登陆大厅"
+    material: NETHER_STAR
+    slot: 13
+    lore:
+      - ""
+      - "&7返回登录大厅"
+      - ""
+      - "&a&l→ &e点击传送!"
+    left_click_commands:
+      - "[connect] lobby"
+      - "[sound] BLOCK_LEVER_CLICK"
+      - "[close]"
+  'world':
+    display_name: "&r&#5577dd随机传送至主世界"
+    material: GRASS_BLOCK
+    slot: 20
+    lore:
+      - ""
+      - "&7随机传送至主世界"
+      - ""
+      - "&c建造好家时记得圈地！"
+      - "&c若有东西遗失概不负责"
+      - ""
+      - "&a&l→ &e点击传送!"
+    left_click_commands:
+      - "[player] rtp"
+      - "[sound] BLOCK_LEVER_CLICK"
+      - "[close]"
+  'co':
+    display_name: "&c查询功能"
+    material: SPYGLASS
+    slot: 21
+    lore:
+      - ""
+      - "&7查询方块的破坏与放置记录"
+      - ""
+      - "&c注意：查询会显示详细操作者信息"
+      - "&c请勿滥用查询功能，违者处罚"
+      - ""
+      - "&a&l→ &e点击开启查询!"
+    left_click_commands:
+      - "[player] co i"
+      - "[sound] BLOCK_LEVER_CLICK"
+      - "[close]"
+  'dominion':
+    display_name: "&c关于圈地"
+    material: ARROW
+    slot: 22
+    lore:
+      - ""
+      - "§c§l服务器圈地插件为 §6§lDominion"
+      - ""
+      - "§c§l手动创建领地"
+      - "§7手持§e箭矢§7，依次使用§a左键§7点选领地长方体区域的§e第一个点§7、§d右键§7点击§e第二个点§7。"
+      - "然后使用 §b/dominion create <领地名称> §7创建领地，§c领地名称不可与其他领地重复§7。"
+      - ""
+      - "§a§l自动创建"
+      - "§7不需要选择对角线点，会以玩家为中心自动创建一定区域的领地。"
+      - "使用 §b/dominion §7打开主菜单，点击§a创建领地§7。"
+      - "在弹出的 UI 中输入你要创建的§e领地名称§7："
+      - "输入完成后§a左键§7点击下方中间的§2绿色混凝土§7，即可自动创建一块领地。 "
+      - "&a&l→ &e打开领地菜单!"
+    left_click_commands:
+      - "[player] dominion"
+      - "[sound] BLOCK_LEVER_CLICK"
+      - '[json] [{"text":"§b§l点击这里查看插件Wiki","clickEvent":{"action":"open_url","value":"https://dominion.lunadeer.cn/notes/doc/player/"},"hoverEvent":{"action":"show_text","value":"§a点击这里查看插件Wiki"}}]'
+      - "[close]"
+  'home':
+    display_name: "&r&#5577dd设置家/回到家"
+    material: LIGHT_BLUE_BED
+    slot: 23
+    lore:
+      - ""
+      - "&7返回你的家，或使用/home"
+      - "&a&l→ &e左键以返回你的家!"
+      - ""
+      - "&7在当前位置设置家"
+      - "&a&l→ &e右键以设置你的家!"
+      - ""
+      - "&e默认只能有&c5&e个家"
+      - "&aTips: &7不想要这个家了怎么办?"
+      - "      &7使用指令/removehome <家的名字>"
+      - "      &7想要这个家名字为这个怎么办?"
+      - "      &7使用指令/sethome <家的名字>"
+      - "      &7想要回到某个家怎么办?"
+      - "      &7使用指令/home <家的名字>"
+      - ""
+    left_click_commands:
+      - "[player] home" 
+      - "[sound] BLOCK_LEVER_CLICK"
+      - "[close]"
+    right_click_commands:
+      - "[player] sethome" 
+      - "[sound] BLOCK_LEVER_CLICK"
+      - "[close]"
+  'spawn':
+    display_name: "&r&#5577dd传送至主城"
+    material: COMPASS
+    slot: 24
+    lore:
+      - ""
+      - "&7传送至主城"
+      - "&7十分安全的维度"
+      - "&7在这里不会出现丧尸..."
+      - ""
+      - "&a&l→ &e点击传送!"
+    left_click_commands:
+      - "[player] spawn" 
+      - "[sound] BLOCK_LEVER_CLICK"
+      - "[close]"
+      

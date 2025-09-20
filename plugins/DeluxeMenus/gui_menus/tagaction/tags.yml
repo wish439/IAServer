@@ -1,0 +1,29 @@
+﻿menu_title: 'tag选择'
+update: true
+open_command: tags
+size: 54
+open_requirement:
+  requirements:
+    op:
+      type: string equals
+      input: '%player_is_op%'
+      output: 'yes'
+items:
+  'fill':
+    display_name: "&#64ff64我&#73ff73只&#82ff82是&#91ff91一&#a0ffa0个&#afffaf分&#beffbe割&#cdffcd线&#dcffdc:&#ebffebD&#fafffa"
+    material: WHITE_STAINED_GLASS_PANE
+    slots: [0,1,2,3,4,5,6,7,8,9,17,18,26,27,35,36,44,45,46,47,48,50,51,52,53]
+  'sd':
+    display_name: "闪电"
+    material: BARRIER
+    slot: 10
+    left_click_commands:
+      - "[sound] BLOCK_LEVER_CLICK"
+      - "[meta] set curcom STRING %deluxemenus_meta_curcom_STRING% needlightning"
+      - "[openguimenu] execute"
+  'curcom':
+    display_name: "当前命令"
+    material: OAK_SIGN
+    slot: 4
+    lore:
+      - "%deluxemenus_meta_curcom_STRING%"

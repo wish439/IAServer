@@ -1,0 +1,70 @@
+#Whether to broadcast the announcement randomly
+#When enabled, the announcements in the priority list will be broadcast randomly
+Random-Broadcast: false
+
+#Announcements priority. (From top to bottom)
+Priority:
+- example-announcement
+
+Announcements:
+    example-announcement:
+        #Announcement's name
+        Name: 'Example'
+        #Permission to receive this announcement (deleting this option means no permission is required)
+        Permission: liteannouncer.announcement.example
+        #Delay announcement (unit: seconds, decimals allowed)
+        Delay: 600
+        #Announcement's messages.
+        Messages:
+        - '&d&l温馨小提示'
+        - '  没加QQ群的小萌新们请加一下QQ群。'
+        - '  &c死亡不掉落&f在&e菜单&f里面可以打开噢!&7[Shift+F]打开菜单'
+        - '  在里边可以反馈bug，交流，合作。'
+        - '  任何第三方私信不要信除腐竹以外，谨慎被骗！'
+        - '   %example_json_component%   %example_json_qq%  %example_json_cl% '
+        #Announcement's title message.
+        Titles:
+            Enabled: false
+            Titles-Setting:
+                'example_1':
+                    Delay: 0.3
+                    Fade-In: 0
+                    Stay: 0.4
+                    Fade-Out: 0
+                    Title: '&a&lThis is a title~'
+                    Sub-Title: '&e&lThis is a sub title~'
+                'example_2':
+                    Delay: 0.3
+                    Fade-In: 0
+                    Stay: 0.4
+                    Fade-Out: 0
+                    Title: '&b&lThis is a title~'
+                    Sub-Title: '&f&lThis is a sub title~'
+            Task-Sequence:
+            - 'example_1'
+            - 'example_2'
+            - 'example_1'
+            - 'example_2'
+            - 'example_1'
+            - 'example_2'
+        #Announcement's action-bar message.
+        ActionBars: 
+            Enabled: false
+            Task-Sequence:
+            #List of messages (format: [message]:[delay])
+            - '&a&lThis is an example of action bar text': 0.2
+            - '&b&lThis is an example of action bar text': 0.2
+            - '&c&lThis is an example of action bar text': 0.2
+            - '&d&lThis is an example of action bar text': 0.2
+            - '&e&lThis is an example of action bar text': 0.2
+            - '&a&lThis is an example of action bar text': 0.2
+            - '&b&lThis is an example of action bar text': 0.2
+            - '&c&lThis is an example of action bar text': 0.2
+            - '&d&lThis is an example of action bar text': 0.2
+            - '&e&lThis is an example of action bar text': 0.2
+            - '&a&lThis is an example of action bar text': 0.2
+            - '&b&lThis is an example of action bar text': 0.2
+            - '&c&lThis is an example of action bar text': 0.2
+            - '&d&lThis is an example of action bar text': 0.2
+            - '&e&lThis is an example of action bar text': 0.2
+            - '&r': 0.2
