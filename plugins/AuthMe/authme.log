@@ -1,0 +1,246 @@
+[09-21 14:17:35]: [INFO] Created column 'regdate' and set the current timestamp, 1758435455218, to all 0 rows
+[09-21 14:17:35]: [INFO] SQLite Setup finished
+[09-21 14:17:36]: [INFO] No supported permissions system found! Permissions are disabled!
+[09-21 14:17:36]: [WARN] WARNING! The protectInventory feature requires ProtocolLib! Disabling it...
+[09-21 14:17:36]: [INFO] 
+    ___         __  __    __  ___   
+   /   | __  __/ /_/ /_  /  |/  /__ 
+  / /| |/ / / / __/ __ \/ /|_/ / _ \
+ / ___ / /_/ / /_/ / / / /  / /  __/
+/_/  |_\__,_/\__/_/ /_/_/  /_/\___/ 
+                                    
+[09-21 14:17:36]: [INFO] AuthMeReReloaded is running on Paper
+[09-21 14:17:36]: [INFO] AuthMeReReloaded is enabled successfully!
+[09-21 14:17:36]: [INFO] GitHub: https://github.com/HaHaWTH/AuthMeReReloaded/
+[09-21 14:17:36]: [INFO] Checking for updates...
+[09-21 14:17:37]: [INFO] You are running the latest version.
+[09-21 14:20:21]: [INFO] AuthMe 5.7.0-FORK-b53 is unloaded successfully!
+[09-21 14:21:03]: [INFO] SQLite Setup finished
+[09-21 14:21:03]: [INFO] No supported permissions system found! Permissions are disabled!
+[09-21 14:21:03]: [WARN] WARNING! The protectInventory feature requires ProtocolLib! Disabling it...
+[09-21 14:21:04]: [INFO] 
+    ___         __  __    __  ___   
+   /   | __  __/ /_/ /_  /  |/  /__ 
+  / /| |/ / / / __/ __ \/ /|_/ / _ \
+ / ___ / /_/ / /_/ / / / /  / /  __/
+/_/  |_\__,_/\__/_/ /_/_/  /_/\___/ 
+                                    
+[09-21 14:21:04]: [INFO] AuthMeReReloaded is running on Paper
+[09-21 14:21:04]: [INFO] AuthMeReReloaded is enabled successfully!
+[09-21 14:21:04]: [INFO] GitHub: https://github.com/HaHaWTH/AuthMeReReloaded/
+[09-21 14:21:04]: [INFO] Checking for updates...
+[09-21 14:21:05]: [INFO] You are running the latest version.
+[09-21 14:21:41]: [INFO:FINE] Uoutai registered 127.0.0.1
+[09-21 14:21:41]: [INFO:FINE] Uoutai logged in 127.0.0.1
+[09-21 14:21:48]: [INFO] AuthMe 5.7.0-FORK-b53 is unloaded successfully!
+[09-21 14:24:24]: [INFO] SQLite Setup finished
+[09-21 14:24:24]: [INFO] No supported permissions system found! Permissions are disabled!
+[09-21 14:24:24]: [INFO] Hooked successfully into PlaceholderAPI
+[09-21 14:24:24]: [INFO] 
+    ___         __  __    __  ___   
+   /   | __  __/ /_/ /_  /  |/  /__ 
+  / /| |/ / / / __/ __ \/ /|_/ / _ \
+ / ___ / /_/ / /_/ / / / /  / /  __/
+/_/  |_\__,_/\__/_/ /_/_/  /_/\___/ 
+                                    
+[09-21 14:24:24]: [INFO] AuthMeReReloaded is running on Paper
+[09-21 14:24:24]: [INFO] AuthMeReReloaded is enabled successfully!
+[09-21 14:24:24]: [INFO] GitHub: https://github.com/HaHaWTH/AuthMeReReloaded/
+[09-21 14:24:24]: [INFO] Checking for updates...
+[09-21 14:24:25]: [INFO] You are running the latest version.
+[09-21 14:29:06]: [INFO] SQLite Setup finished
+[09-21 14:29:06]: [INFO] No supported permissions system found! Permissions are disabled!
+[09-21 14:29:06]: [INFO] Hooked successfully into PlaceholderAPI
+[09-21 14:29:06]: [INFO] 
+    ___         __  __    __  ___   
+   /   | __  __/ /_/ /_  /  |/  /__ 
+  / /| |/ / / / __/ __ \/ /|_/ / _ \
+ / ___ / /_/ / /_/ / / / /  / /  __/
+/_/  |_\__,_/\__/_/ /_/_/  /_/\___/ 
+                                    
+[09-21 14:29:06]: [INFO] AuthMeReReloaded is running on Paper
+[09-21 14:29:06]: [INFO] AuthMeReReloaded is enabled successfully!
+[09-21 14:29:06]: [INFO] GitHub: https://github.com/HaHaWTH/AuthMeReReloaded/
+[09-21 14:29:06]: [INFO] Checking for updates...
+[09-21 14:29:07]: [INFO] You are running the latest version.
+[09-21 14:30:42]: [INFO:FINE] Uoutai logged in 127.0.0.1
+[09-21 14:37:03]: [INFO] SQLite Setup finished
+[09-21 14:37:03]: [INFO] Hooked into LuckPerms!
+[09-21 14:37:03]: [INFO] Hooked successfully into PlaceholderAPI
+[09-21 14:37:03]: [INFO] 
+    ___         __  __    __  ___   
+   /   | __  __/ /_/ /_  /  |/  /__ 
+  / /| |/ / / / __/ __ \/ /|_/ / _ \
+ / ___ / /_/ / /_/ / / / /  / /  __/
+/_/  |_\__,_/\__/_/ /_/_/  /_/\___/ 
+                                    
+[09-21 14:37:03]: [INFO] AuthMeReReloaded is running on Paper
+[09-21 14:37:03]: [INFO] AuthMeReReloaded is enabled successfully!
+[09-21 14:37:03]: [INFO] GitHub: https://github.com/HaHaWTH/AuthMeReReloaded/
+[09-21 14:37:03]: [INFO] Checking for updates...
+[09-21 14:37:04]: [INFO] You are running the latest version.
+[09-21 14:37:57]: [INFO:FINE] Uoutai logged in 127.0.0.1
+[09-21 14:43:23]: [INFO] AuthMe 5.7.0-FORK-b53 is unloaded successfully!
+[09-21 14:56:39]: [INFO] SQLite Setup finished
+[09-21 14:56:40]: [INFO] Hooked into LuckPerms!
+[09-21 14:56:40]: [INFO] Hooked successfully into PlaceholderAPI
+[09-21 14:56:40]: [INFO] 
+    ___         __  __    __  ___   
+   /   | __  __/ /_/ /_  /  |/  /__ 
+  / /| |/ / / / __/ __ \/ /|_/ / _ \
+ / ___ / /_/ / /_/ / / / /  / /  __/
+/_/  |_\__,_/\__/_/ /_/_/  /_/\___/ 
+                                    
+[09-21 14:56:40]: [INFO] AuthMeReReloaded is running on Paper
+[09-21 14:56:40]: [INFO] AuthMeReReloaded is enabled successfully!
+[09-21 14:56:40]: [INFO] GitHub: https://github.com/HaHaWTH/AuthMeReReloaded/
+[09-21 14:56:40]: [INFO] Checking for updates...
+[09-21 14:56:40]: [INFO] AuthMe 5.7.0-FORK-b53 is unloaded successfully!
+[09-21 14:58:22]: [INFO] SQLite Setup finished
+[09-21 14:58:23]: [INFO] Hooked into LuckPerms!
+[09-21 14:58:23]: [INFO] Hooked successfully into PlaceholderAPI
+[09-21 14:58:23]: [INFO] 
+    ___         __  __    __  ___   
+   /   | __  __/ /_/ /_  /  |/  /__ 
+  / /| |/ / / / __/ __ \/ /|_/ / _ \
+ / ___ / /_/ / /_/ / / / /  / /  __/
+/_/  |_\__,_/\__/_/ /_/_/  /_/\___/ 
+                                    
+[09-21 14:58:23]: [INFO] AuthMeReReloaded is running on Paper
+[09-21 14:58:23]: [INFO] AuthMeReReloaded is enabled successfully!
+[09-21 14:58:23]: [INFO] GitHub: https://github.com/HaHaWTH/AuthMeReReloaded/
+[09-21 14:58:23]: [INFO] Checking for updates...
+[09-21 14:58:24]: [INFO] You are running the latest version.
+[09-21 14:59:43]: [INFO:FINE] Uoutai logged in 127.0.0.1
+[09-21 15:00:47]: [INFO] AuthMe 5.7.0-FORK-b53 is unloaded successfully!
+[09-21 15:01:04]: [INFO] SQLite Setup finished
+[09-21 15:01:04]: [INFO] Hooked into LuckPerms!
+[09-21 15:01:04]: [INFO] Hooked successfully into PlaceholderAPI
+[09-21 15:01:04]: [INFO] 
+    ___         __  __    __  ___   
+   /   | __  __/ /_/ /_  /  |/  /__ 
+  / /| |/ / / / __/ __ \/ /|_/ / _ \
+ / ___ / /_/ / /_/ / / / /  / /  __/
+/_/  |_\__,_/\__/_/ /_/_/  /_/\___/ 
+                                    
+[09-21 15:01:04]: [INFO] AuthMeReReloaded is running on Paper
+[09-21 15:01:04]: [INFO] AuthMeReReloaded is enabled successfully!
+[09-21 15:01:04]: [INFO] GitHub: https://github.com/HaHaWTH/AuthMeReReloaded/
+[09-21 15:01:04]: [INFO] Checking for updates...
+[09-21 15:01:05]: [INFO] You are running the latest version.
+[09-21 15:03:30]: [INFO:FINE] Uoutai logged in 127.0.0.1
+[09-21 15:05:02]: [INFO] AuthMe 5.7.0-FORK-b53 is unloaded successfully!
+[09-21 15:05:26]: [INFO] SQLite Setup finished
+[09-21 15:05:26]: [INFO] Hooked into LuckPerms!
+[09-21 15:05:26]: [INFO] Hooked successfully into PlaceholderAPI
+[09-21 15:05:26]: [INFO] 
+    ___         __  __    __  ___   
+   /   | __  __/ /_/ /_  /  |/  /__ 
+  / /| |/ / / / __/ __ \/ /|_/ / _ \
+ / ___ / /_/ / /_/ / / / /  / /  __/
+/_/  |_\__,_/\__/_/ /_/_/  /_/\___/ 
+                                    
+[09-21 15:05:26]: [INFO] AuthMeReReloaded is running on Paper
+[09-21 15:05:26]: [INFO] AuthMeReReloaded is enabled successfully!
+[09-21 15:05:26]: [INFO] GitHub: https://github.com/HaHaWTH/AuthMeReReloaded/
+[09-21 15:05:26]: [INFO] Checking for updates...
+[09-21 15:05:27]: [INFO] You are running the latest version.
+[09-21 15:08:06]: [INFO] AuthMe 5.7.0-FORK-b53 is unloaded successfully!
+[09-21 15:09:12]: [INFO] SQLite Setup finished
+[09-21 15:09:12]: [INFO] Hooked into LuckPerms!
+[09-21 15:09:13]: [INFO] Hooked successfully into PlaceholderAPI
+[09-21 15:09:13]: [INFO] 
+    ___         __  __    __  ___   
+   /   | __  __/ /_/ /_  /  |/  /__ 
+  / /| |/ / / / __/ __ \/ /|_/ / _ \
+ / ___ / /_/ / /_/ / / / /  / /  __/
+/_/  |_\__,_/\__/_/ /_/_/  /_/\___/ 
+                                    
+[09-21 15:09:13]: [INFO] AuthMeReReloaded is running on Paper
+[09-21 15:09:13]: [INFO] AuthMeReReloaded is enabled successfully!
+[09-21 15:09:13]: [INFO] GitHub: https://github.com/HaHaWTH/AuthMeReReloaded/
+[09-21 15:09:13]: [INFO] Checking for updates...
+[09-21 15:09:15]: [INFO] You are running the latest version.
+[09-21 15:09:56]: [INFO:FINE] Uoutai logged in 127.0.0.1
+[09-21 15:12:34]: [INFO] AuthMe 5.7.0-FORK-b53 is unloaded successfully!
+[09-21 15:17:09]: [INFO] SQLite Setup finished
+[09-21 15:17:09]: [INFO] Hooked into LuckPerms!
+[09-21 15:17:10]: [INFO] Hooked successfully into CMI
+[09-21 15:17:10]: [INFO] Hooked successfully into PlaceholderAPI
+[09-21 15:17:10]: [INFO] 
+    ___         __  __    __  ___   
+   /   | __  __/ /_/ /_  /  |/  /__ 
+  / /| |/ / / / __/ __ \/ /|_/ / _ \
+ / ___ / /_/ / /_/ / / / /  / /  __/
+/_/  |_\__,_/\__/_/ /_/_/  /_/\___/ 
+                                    
+[09-21 15:17:10]: [INFO] AuthMeReReloaded is running on Paper
+[09-21 15:17:10]: [INFO] AuthMeReReloaded is enabled successfully!
+[09-21 15:17:10]: [INFO] GitHub: https://github.com/HaHaWTH/AuthMeReReloaded/
+[09-21 15:17:10]: [INFO] Checking for updates...
+[09-21 15:17:13]: [INFO] You are running the latest version.
+[09-21 15:17:30]: [INFO:FINE] Uoutai logged in 127.0.0.1
+[09-21 15:18:46]: [INFO] AuthMe 5.7.0-FORK-b53 is unloaded successfully!
+[09-21 15:20:51]: [INFO] SQLite Setup finished
+[09-21 15:20:51]: [INFO] Hooked into LuckPerms!
+[09-21 15:20:51]: [INFO] Hooked successfully into CMI
+[09-21 15:20:51]: [INFO] Hooked successfully into PlaceholderAPI
+[09-21 15:20:51]: [INFO] 
+    ___         __  __    __  ___   
+   /   | __  __/ /_/ /_  /  |/  /__ 
+  / /| |/ / / / __/ __ \/ /|_/ / _ \
+ / ___ / /_/ / /_/ / / / /  / /  __/
+/_/  |_\__,_/\__/_/ /_/_/  /_/\___/ 
+                                    
+[09-21 15:20:51]: [INFO] AuthMeReReloaded is running on Paper
+[09-21 15:20:51]: [INFO] AuthMeReReloaded is enabled successfully!
+[09-21 15:20:51]: [INFO] GitHub: https://github.com/HaHaWTH/AuthMeReReloaded/
+[09-21 15:20:51]: [INFO] Checking for updates...
+[09-21 15:20:52]: [INFO] You are running the latest version.
+[09-21 15:21:17]: [INFO:FINE] Uoutai logged in 127.0.0.1
+[09-21 15:23:43]: [INFO:FINE] Uoutai logged in 127.0.0.1
+[09-21 15:24:04]: [INFO] AuthMe 5.7.0-FORK-b53 is unloaded successfully!
+[09-21 15:30:37]: [INFO] SQLite Setup finished
+[09-21 15:30:37]: [INFO] Hooked into LuckPerms!
+[09-21 15:30:37]: [INFO] Hooked successfully into CMI
+[09-21 15:30:37]: [INFO] Hooked successfully into PlaceholderAPI
+[09-21 15:30:37]: [INFO] 
+    ___         __  __    __  ___   
+   /   | __  __/ /_/ /_  /  |/  /__ 
+  / /| |/ / / / __/ __ \/ /|_/ / _ \
+ / ___ / /_/ / /_/ / / / /  / /  __/
+/_/  |_\__,_/\__/_/ /_/_/  /_/\___/ 
+                                    
+[09-21 15:30:37]: [INFO] AuthMeReReloaded is running on Paper
+[09-21 15:30:37]: [INFO] AuthMeReReloaded is enabled successfully!
+[09-21 15:30:37]: [INFO] GitHub: https://github.com/HaHaWTH/AuthMeReReloaded/
+[09-21 15:30:37]: [INFO] Checking for updates...
+[09-21 15:30:39]: [INFO] You are running the latest version.
+[09-21 15:31:48]: [INFO:FINE] Uoutai logged in 127.0.0.1
+[09-21 15:39:29]: [INFO] Unhooked from Permissions!
+[09-21 15:39:29]: [INFO] Hooked into LuckPerms!
+[09-21 15:39:29]: [INFO] SQLite Setup finished
+[09-21 16:01:51]: [INFO:FINE] Uoutai logged in 127.0.0.1
+[09-21 16:09:42]: [INFO] CMI has been disabled: unhooking
+[09-21 16:09:45]: [INFO] Hooked successfully into CMI
+[09-21 16:09:59]: [INFO] CMI has been disabled: unhooking
+[09-21 16:10:21]: [INFO] Hooked successfully into CMI
+[09-21 16:49:35]: [INFO:FINE] Uoutai logged in 127.0.0.1
+[09-21 16:50:50]: [INFO] AuthMe 5.7.0-FORK-b53 is unloaded successfully!
+[09-21 16:52:50]: [INFO] SQLite Setup finished
+[09-21 16:52:50]: [INFO] Hooked into LuckPerms!
+[09-21 16:52:50]: [INFO] Hooked successfully into CMI
+[09-21 16:52:50]: [INFO] Hooked successfully into PlaceholderAPI
+[09-21 16:52:51]: [INFO] 
+    ___         __  __    __  ___   
+   /   | __  __/ /_/ /_  /  |/  /__ 
+  / /| |/ / / / __/ __ \/ /|_/ / _ \
+ / ___ / /_/ / /_/ / / / /  / /  __/
+/_/  |_\__,_/\__/_/ /_/_/  /_/\___/ 
+                                    
+[09-21 16:52:51]: [INFO] AuthMeReReloaded is running on Paper
+[09-21 16:52:51]: [INFO] AuthMeReReloaded is enabled successfully!
+[09-21 16:52:51]: [INFO] GitHub: https://github.com/HaHaWTH/AuthMeReReloaded/
+[09-21 16:52:51]: [INFO] Checking for updates...
+[09-21 16:52:53]: [INFO] You are running the latest version.
+[09-21 16:54:57]: [INFO:FINE] Uoutai logged in 127.0.0.1

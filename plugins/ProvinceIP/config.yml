@@ -1,0 +1,14 @@
+# 调试模式
+debug: false
+
+# 接口配置
+IPQuery:
+  apis:
+    - name: 淘宝接口
+      type: 1
+    - name: Voer接口
+      type: 2
+    - name: 太平洋接口
+      type: 3
+  #启动时默认使用哪个接口
+  default: 1
