@@ -1,0 +1,1187 @@
+# ********************************************
+# ** 更多选项请查看 Settings 文件夹 **
+# ********************************************
+
+# 要使用的语言文件
+Language: CN
+# 定义是否要从 GitHub 仓库自动下载默认语言文件
+# 如果您使用 EN 或已有语言设置且不需要其他语言，可以禁用此选项
+LanguageDownload: true
+
+Economy:
+  # 全局启用或禁用 CMI 经济系统
+  # 如果存在 CMIInjector，这将自动设置为 true
+  # 注意！要使经济系统与其他插件正常工作，您需要注入器或重新编译的 Vault 版本
+  # 您可以在插件页面顶部找到这两个选项
+  # 注意！如果在服务器运行时禁用了 CMI 经济系统，您需要完全重启服务器才能生效，并避免检索玩家余额时出现问题
+  Enabled: false
+  # 确定玩家是否需要通过点击聊天消息来确认金钱支付
+  Confirmation: false
+  # 设置为 true 以记录玩家之间的金钱转移
+  LogEnabled: false
+  log:
+    Unknown: true
+    Transfer: true
+    IgnoredUsers:
+      - Zrips
+  Cheque:
+    # 确定玩家可以创建的支票最大金额
+    # 设置为 0 以取消限制
+    MaxValue: 1.0E8
+    # 如果设置为 true，玩家需要持有一张纸来创建支票
+    Paper: true
+    # 设置为 true 时，玩家需要拥有 cmi.command.cheque.withdraw 权限节点才能兑现支票
+    Permission: false
+    # 是否允许在创造模式中使用支票？
+    # 如果您有创造服务器，请保持为 false，否则玩家可能会开始复制物品
+    InCreative: false
+    # 是否接受具有非编码数据的旧支票物品堆
+    # 为了最大安全性，请保持为 false
+    AcceptNotEncoded: false
+  PaymentWithShorts:
+    # 设置为 true 时，玩家将能够使用缩写金额格式进行支付，如 10k 结果为 10000 等
+    # 此外，10.2k 将得到 10200
+    Allow: true
+    # 我们应该接受的后缀列表以及它们对应的金额
+    # 定义后缀时只能使用一个字母
+    values:
+      - k-1000
+      - m-1000000
+      - b-1000000000
+      - t-1000000000000
+      - q-1000000000000000
+  BalTop:
+    # 从财富排行榜中排除的玩家列表
+    Exclude:
+      - Notch
+    # 启用后，财富排行榜将显示缩写的金钱值，如 12.5M 而不是 12501234
+    DisplayWithShorts: false
+    # 从财富排行榜中排除的名称列表
+    # 可用于过滤掉 Towny 城镇
+    ExcludeStartingWith:
+      - town_
+      - town-
+      - towny_
+      - towny-
+      - debt-
+      - debt_
+    # 设置为 true 时，一些虚假账户将被包含在财富排行榜中
+    # 这应包括一些先前标记为虚假的账户，这些账户是为城镇使用等目的创建的
+    IncludeFakes: false
+    # 设置为 0 或更低以禁用此功能
+    # 玩家离线天数，超过此天数的玩家将从财富排行榜中排除
+    ExcludeInactive: 0
+  Global:
+    # 玩家初始拥有的金钱金额
+    StartingAmount: 100.0
+    # 最小金额，如果需要可以为负数
+    MinimalAmount: 0.0
+    # 玩家可以拥有的最大金钱金额。设置为 -1 以禁用此限制
+    MaximumAmount: 1.0E8
+    # 定义玩家可以向另一个玩家发送的最小金额
+    # 这可以防止一些玩家通过发送微小金额来制造烦人的垃圾邮件
+    MinimalPay: 0.5
+    # 定义是否允许使用小数进行支付
+    # 如果禁用，则支付将限制为整数，如果玩家提供带小数的数字，我们将向下取整
+    Fractions: true
+    # 显示余额等时使用的货币符号
+    CurrencySymbol: €
+    # 用于显示金钱的格式
+    MoneyFormat: '###,##0.00'
+    # 将长数字转换为短数字，如 12305122 转换为 12.3m
+    UseShortNumbers: false
+    # 此格式仅用于获得后缀的金额，如 '1.23k'，而低于 1k 的数字将使用 MoneyFormat
+    shortNumbersFormat: '###,##0.0'
+    # 短数字的后缀
+    ShortNumbersSuffixes:
+      - ''
+      - k-1000
+      - m-1000000
+      - b-1000000000
+      - t-1000000000000
+      - q-1000000000000000
+    # 替换为西方格式，其中小数由 , 分隔，千位由 . 分隔。例如 1,000,000.00 变为 1.000.000,00
+    SwitchPlaces: false
+    # 货币符号的位置
+    Placing: '[money][symbol]'
+
+# 文件保存设置
+FileSave:
+  # 仅在遇到驱动器 I/O 问题且需要异步保存玩家文件以减少 MC 服务器等待时间时，才将其更改为 true
+  Async: false
+
+# 交互命令设置
+InteractiveCommands:
+  # 用于识别告示牌上使用的公共交互命令的正则表达式
+  # 默认格式是 [ic:[icName]]，例如 [ic:trash]
+  # 如果想要简洁格式，请使用类似的正则表达式: (\[([a-zA-Z0-9]+)\])
+  SignRegex: (\[ic:([a-zA-Z0-9]+)\])
+  # IC 列表按距离或字母顺序排序
+  SortByDistance: true
+
+# 优化设置
+Optimizations:
+  # 禁用时，我们不会尝试在服务器启动时取消虚假OP，同时禁用 asFakeOp! 专用命令的使用
+  UseFakeOperator: false
+  # 禁用时，我们将不检查执行自定义别名命令时可能出现的无限循环
+  InfiniteLoopDetection: true
+  # 设置为 true 时，发送到控制台的任何消息都将去除所有颜色
+  # 如果您有单色控制台，请保持为 true
+  MonochromeConsole: false
+  # 玩家加入服务器时给予的无敌状态时间（秒）
+  # 设置为 0 以禁用
+  # 最大 60 秒
+  ImmortalityOnJoin: 3
+  # 启用或禁用维护模式
+  Maintenance: false
+  # 启用维护模式时自动踢出所有没有 cmi.command.maintenance.bypass 权限节点的玩家
+  MaintenanceAutoKick: true
+  # 启用后将显示 BossBar 消息，通知当前已启用的维护模式
+  MaintenanceBossBar: true
+  # 设置为 true 时，发光颜色、玩家碰撞、名称牌等功能将停止工作，CMI 将避免执行与玩家队伍相关的任何操作
+  # 如果您在使用其他利用玩家队伍实现某些功能的插件时遇到问题，请启用此选项
+  DisableTeamManagement: false
+  ArmorStands:
+    # 设置为 true 时，插件将通过发送虚假的方块放置事件来检查玩家是否可以操纵盔甲架，并检查是否有任何插件想要阻止此操作
+    # 这有助于最小化玩家在盔甲架所在区域没有建筑权限时操纵盔甲架的可能性
+    CheckBlockPlace: false
+    # 盔甲架编辑器中可以设置的最小盔甲架缩放比例
+    MinScale: 0.5
+    # 盔甲架编辑器中可以设置的最大盔甲架缩放比例
+    MaxScale: 3
+    Templates:
+      # 设置为 true 时，玩家需要拥有 cmi.command.armorstand.template.[模板名] 权限节点才能部署保存的模板
+      SpecificPermission: false
+  AutoDownload:
+    # 如果您没有 GeoIP.dat，它将在服务器启动时自动下载。可能需要重启才能生效
+    GeoIp: false
+    # 如果您没有 GeoLiteCity.dat，它将在服务器启动时自动下载。可能需要重启才能生效
+    GeoLiteCity: false
+  # 启用后，当右键点击头颅时，将在动作栏中显示头颅所有者名称
+  ShowSkullOwner: true
+  # 启用后，当右键点击蜂箱时，将在动作栏中显示蜂箱信息
+  ShowBeeHiveInformation: true
+  # 启用后，当右键点击装饰罐时，将在动作栏中显示装饰罐内容信息
+  ShowDecoratedPotInformation: true
+  # 创建电梯告示牌时设置的指示符。不区分大小写
+  ElevatorIndicator:
+    - '[CMIElevator]'
+    - '[Elevator]'
+  SignEdit:
+    # 定义告示牌顶行，玩家将无法使用 /cmi se 命令编辑具有这些行的告示牌
+    BlackList:
+      - '[Private]'
+      - '[More Users]'
+      - '[Everyone]'
+      - '[AdminShop]'
+      - '[ChestShop]'
+      - '[CMIElevator]'
+  # 定义电梯类型。如果在告示牌的第二行使用，玩家将被直接传送到其前方，而不是保持玩家原始的 x 和 z 坐标
+  ElevatorStaticIndicator: '[*]'
+  # 用于在邮件、检查封禁、信息页面等位置显示日期
+  LongDateFormat2: dd/MM/yy HH:mm:ss
+  # 用于在库存 GUI 等位置显示日期
+  ShortDateFormat: dd/MM/yy
+  # 是否将出售手持物品的操作记录到文件中
+  SellLog: true
+  # 设置为 true 时，使用任何需要玩家名称的命令时，如果插件无法通过给定的全名确定玩家，则将使用在线玩家的部分匹配。例如：/cmi heal rips 可以治疗玩家 Zrips
+  # 当玩家有复杂的名称时很有用
+  PartialPlayerName: false
+  # 如果希望在使用部分玩家名称时优先考虑在线玩家，请启用此设置
+  # 不要忘记启用 PartialPlayerName 以充分发挥效果
+  # 请注意，这可能会阻止您访问与当前在线玩家具有相同部分名称的离线玩家
+  # 例如，当 Luuk666 在线时，可能无法再访问离线的 Luuk
+  # 可以通过为名称添加 -exa- 后缀来覆盖此设置，因此 luuk-exa- 将返回离线玩家对象
+  PrioritizeOnlinePlayers: false
+  # 设置为 true 时，帮助页面中的命令将按字母顺序排序
+  # 如果设置为 false，命令将按优先级排序
+  CommandSorting: true
+  # 默认情况下，我们不允许 Rcon 类型的命令，如果您已正确设置服务器以安全地接受远程控制台命令并且有需要，则可以启用它
+  AllowRconCommands: false
+  CustomCommandSender: []
+  # 启用后，Rcon 反馈消息将不包含颜色代码，以显示更清晰
+  CleanRconCommands: false
+  # 百分比值 (1-100)，用于在找不到命令时选择最佳命令匹配
+  # 示例：/cmi spawnmb 与 /cmi spawnmob 的匹配度为 87.5%
+  # 设置为 0 以禁用
+  SimilarCommandChecker: 75
+  # 设置为 true 时，如果玩家输入了不正确的命令，则不会执行该命令
+  # 但在任何情况下都会显示有关不正确用法和最佳匹配的信息消息
+  SimilarCommandPrevention: false
+  # 设置为 true 时，帮助页面中以 /cmi 开头的命令将通过隐藏基础命令来缩短。例如 /cmi back 变为 /back
+  # 请注意，如果为该命令设置了别名或自定义别名，则这是自动功能
+  # 并且请注意，这仅是外观更改，不会影响命令的使用
+  RemoveLabel: false
+  # 设置为 true 时，所有玩家都可以通过将鼠标悬停在错误消息上来查看缺少的权限节点
+  # 设置为 false 时，只有拥有 cmi.permisiononerror 权限节点的玩家才能看到缺少的权限节点
+  # 请注意，默认情况下玩家拥有权限节点访问权限，因此如果您想向他们隐藏缺少的权限节点，请取消它
+  PermisionOnError: false
+  # 设置为 true 时，每次玩家尝试使用他没有权限的内容时，控制台都会显示消息
+  PermisionInConsole: true
+  Teleport:
+    # 玩家需要拥有 cmi.safeteleport 权限节点才能在传送到目标位置时被放置在安全位置
+    # 为 true 时，在检查安全位置时，我们将尝试向下确定，如果失败，则从目标位置向上
+    # 设置为 false 时，首先将检查目标位置上方的位置，然后向下
+    SafeLocationDownThenUp: false
+    # 传送后玩家应处于无敌状态的时间（秒）
+    # 这将防止传送后的玩家在定义的时间内伤害他人
+    # 如果要禁用，请设置为 0
+    # 最大 60 秒
+    Invulnerability: 5
+    # 传送到此世界后玩家应处于无敌状态的时间（秒）
+    # 如果未定义世界，则将使用默认计时器
+    InvulnerabilityPerWorld:
+      - testWorld-5
+    # 传送无敌状态被禁用的情况
+    DisableInvulnerability:
+      # 如果玩家破坏或放置方块，则禁用
+      OnBlockBreakPlace: true
+      # 如果玩家与方块或实体交互，则禁用
+      OnInteraction: true
+    # 设置为 true 时，希望使用 tp 命令作为 /cmi tp [要传送的玩家] [传送地点]，当为 false 时，为 /cmi tp [传送地点] [要传送的玩家]
+    SwitchPlaces: true
+    CurrentLoc:
+      # 仅适用于 tpa、tpahere 和 tpaall
+      # 如果设置为 true，则接受传送请求后，玩家将被传送到当前玩家位置
+      # 如果设置为 false，则玩家将被传送到发出传送请求时的玩家位置
+      tpa: true
+      # 仅适用于 tpahere
+      tpahere: true
+    # 跳跃命令的默认距离。可以通过 cmi.command.jump.[数量] 权限节点覆盖
+    JumpDefault: 50
+    Tpa:
+      # 定义接受 tpa 或 tpahere 请求的时间（秒）
+      Time: 60
+      # 定义接受 tpa 或 tpahere 后玩家被传送的时间（秒）
+      Warmup: 3
+      # 定义接受 tpa 或 tpahere 时玩家是否可以移动
+      Move: false
+      # 定义拒绝他们的请求后阻止玩家传送提供的时间（秒）
+      Block: 120
+      # 最大传送范围的块距离
+      # 设置为 0 以禁用
+      # 设置为任何正数将阻止玩家向其他世界中的玩家请求传送，同时限制玩家之间的范围
+      # 可以通过玩家拥有 cmi.command.tpa.max.[块数] 权限节点来绕过
+      MaxDistance: 0
+    TpaHere:
+      # 最大传送范围的块距离
+      # 设置为 0 以禁用
+      # 可以通过玩家拥有 cmi.command.tpahere.max.[块数] 权限节点来绕过
+      MaxDistance: 0
+    Tp:
+      # 定义绕过阻止传送到不安全位置的时间（秒）
+      Bypass: 15
+    # 设置为 true 时，在发送 tpa 或 tpahere 请求时添加接受和拒绝按钮
+    DenyConfirm: true
+    BlackListedItems:
+      # 选项，当玩家库存中有黑名单物品时阻止玩家传送。可以通过 cmi.teleport.bypassblacklist 绕过
+      Enabled: false
+      EnabledFor:
+        tp: true
+        tpa: true
+        tpahere: true
+        warp: true
+        home: true
+        spawn: true
+      # 我们要保护的物品和数量（如果未定义，默认为 0）
+      # 用 : 分隔数量，例如 IronOre:5 将限制玩家库存中的铁矿石块最多为 5 个，超过则玩家无法传送
+      List:
+        - Diamond
+        - DiamondBlock
+        - DiamondOre
+        - ironore:5
+    Back:
+      # 如果玩家传送的距离小于定义的数量，则不会触发返回位置
+      MinDistance: 5
+      # 设置为 false 时，当使用世界编辑指南针四处传送时，我们将不包含传送位置
+      # 设置为 true 时，我们将包含每个传送动作，即使您只是用指南针跳来跳去
+      WithWE: true
+      # 玩家无法使用 /back 命令返回的世界列表
+      BlackList:
+        - TeztWorldz
+      # /back 命令应过期的时间（秒）。设置为 0 以禁用
+      Expiration: 0
+    DBack:
+      # 玩家无法使用 /dback 命令返回的世界列表
+      BlackList:
+        - TeztWorldz
+      # /dback 命令应过期的时间（秒）。设置为 0 以禁用
+      Expiration: 0
+  Hat:
+    Block:
+      # 启用后，如果物品有自定义描述，我们将不允许将其放入头部槽位
+      # 不适用于头盔物品
+      WithLore: false
+      # 启用后，我们将不允许装备非帽子类型的物品
+      NoneHatItems: true
+      # 启用后，我们将不允许装备带有附魔的非帽子物品
+      NoneHatEnchanted: true
+    Allow:
+      # 启用后，我们将允许玩家在没有 cmi.inventoryhat 权限节点的情况下戴上生物头颅
+      # 禁用后，玩家需要拥有 cmi.inventoryhat 才能将生物头颅作为帽子戴上
+      MobHeads: true
+    # 允许在玩家头部使用的材料列表
+    # 保持为空以允许所有材料在玩家头部使用
+    WhiteList: []
+  helpop:
+    # 设置为 true 时，玩家将看不到他发送到 helpop 的消息，而是看到预定义的消息，通知他的问题已发送给在线工作人员
+    feedbackMessage: true
+  IP:
+    # 设置为 true 时，玩家的 IP 将被记录以供将来使用，例如识别玩家的其他账户
+    # 禁用时，某些命令的使用将受到限制
+    # 请注意，由于为每个玩家存储的数据量，这可能会增加缓存数据的大小，特别是如果用户具有动态 IP
+    Record: false
+    # 在将玩家的 IP 记录到数据库之前等待的秒数
+    # 这仅适用于离线服务器，以允许玩家首先登录，然后再记录 IP
+    # 尝试将此值设置得高于您的登录插件允许的登录时间，以便我们记录实际有权使用此名称的玩家的 IP
+    delay: 30
+  # 使用 /cmi maxhp 命令时可以获得的最高生命值
+  MaxHp: 1000
+  # 设置为 true 时，玩家的游戏时间将从用户统计文件中获取，而不是从 CMI 用户数据文件中获取
+  # 如果您有旧服务器并使用玩家统计功能，这有助于获得更准确的游戏时间
+  # 建议保持为 true
+  PlayTimeFromStats: true
+  # 是否运行自动顶级游戏时间更新器
+  # 负责提供玩家当前的顶级游戏时间，这些时间在一致的间隔内更新，对于占位符很有用
+  PlayTimeAutoUpdater: true
+  # 设置为 true 时，游戏时间排行榜将在服务器启动时加载
+  PreloadTopPlaytime: false
+  # 是否使用 CMI 游戏时间跟踪
+  # 启用时，将记录玩家在服务器中每小时的游戏时间
+  # 这对升级或 /playtime 命令没有影响，仅在使用 /cplaytime 命令时显示更具体的按小时游戏时间
+  CMIPlayTimeTracking: false
+  # 从游戏时间排行榜中排除的玩家名称
+  PlaytimeTopExclude:
+    - Some
+    - Names
+    - Here
+  # 玩家离线天数，超过此天数的玩家将从游戏时间排行榜中排除
+  # 设置为 0 以禁用
+  PlaytimeTopOffline: 0
+  ItemName:
+    # 对于黑名单材料，请查看 ItemRenaming.list 部分
+
+    # 设置为 true 时，使用 /itemname 命令更改名称的物品将用 NBT 数据标记为 'ModifiedName' 布尔类型
+    MarkChanged: false
+  ItemLore:
+    # 为 itemlore 命令定义物品描述行的最大长度（不包括颜色代码）
+    # 设置为 0 以取消限制
+    MaxLength: 64
+    # 阻止 itemName 命令使用的材料列表
+    TypeBlackList:
+      - gold_nugget
+    # 设置为 true 时，使用 itemname 命令更改描述的物品将用 NBT 数据标记为 'ModifiedLore' 布尔类型
+    MarkChanged: false
+  OnDurabilityLoss:
+    # 是否在物品耐久度低于设定阈值时通知玩家
+    # 玩家应拥有 cmi.informDurability
+    Tools:
+      Use: true
+      Percentage: 10
+    Armor:
+      Use: true
+      Percentage: 10
+  OnLimitedItemUse:
+    # 通知物品的剩余使用次数
+    Inform: true
+  # 可以防止动物或怪物进入船
+  PreventEntityBoatEnter:
+    Monsters: false
+    Animals: false
+    Villagers: false
+  PreventBedExplosion:
+    Nether: false
+    TheEnd: false
+  # 将玩家从下界"屋顶"上传送下来
+  PreventPlayersOnNetherRoof: false
+  # 定义下界屋顶高度。保持为 0 将使用默认的下界高度，即 128
+  netherRoofHeight: 0
+  # 这将从基岩下方传送玩家，如果他们正在飞行或使用鞘翅滑翔
+  PreventPlayersBelowBedrock: false
+  PreventIronGolem:
+    # 设置为 true 时，铁傀儡死亡时不会掉落玫瑰
+    Roses: false
+  # 设置为 true 时，钓鱼竿不会将抓到的实体拉向你
+  PreventHook: false
+  Commands:
+    # 设置为 true 时，玩家在执行 /cmi 命令而不定义特定命令时将看到完整的可能命令列表
+    # 设置为 false 时，我们将返回"未找到命令"的反馈消息
+    ShowMainHelpPage: true
+    Near:
+      # 使用近似距离而不是精确距离
+      # 这将使用单独的语言环境行，其中包括指向玩家的方向
+      # 因此，与其拥有像 123m 这样的内容，不如拥有 ~100m
+      Approximate: true
+      DefaultDistance: 200
+      Invisibility:
+        # 启用后，我们不会在列表中显示具有隐身药水效果的玩家
+        Hide: false
+        # 仅当先前的 Hide 选项启用时适用
+        # 将混淆玩家的名称，但仍显示他在列表中的位置
+        # 不会使用实际的玩家名称，而是使用带有 &k 颜色格式的通用 8 字符名称，以防止人们通过名称长度意识到谁在附近
+        Obfuscate: false
+      # 启用后，玩家可以点击每个玩家名称，并执行简单的 /cmi point [位置] 命令，该命令显示指向目标玩家的粒子
+      PointTo: true
+      # 使用 /near 命令时要显示的行数
+      Count: 10
+    lastonline:
+      # 使用 lastonline 命令时显示在定义时间段内注销的玩家数量的附加信息的时间（秒）
+      Timers:
+        Time1: 3600
+        Time2: 86400
+        Time3: 604800
+        Time4: 2592000
+    Inv:
+      # 不应能够打开库存的玩家列表
+      # 如果您是 OP，仍然可以绕过此限制
+      BlackList:
+        - Zrips
+      # 是否要对离线玩家禁用 inv 命令
+      DisableOffline: false
+    Clear:
+      # 设置为 true 时，/cmi clear 命令需要确认才能完成
+      Confirmation: true
+      # 在从库存中移除物品之前应检查的 NBT 路径列表。每行应以 NBT: 开头，这是为了将来的更新，其中将涉及额外的可选检查
+      Exclude:
+        - NBT:ItemJoin Name
+        - NBT:ItemJoin.Name
+    List:
+      # 按升序或降序对玩家的自定义组进行排序
+      ASCOrder: true
+  Multicraft:
+    # 设置为 true 时，将防止多 craft 服务器在控制台中刷屏
+    DisableList: false
+  DisableWorldChunkCheckInfo: false
+
+# 游戏时间奖励设置
+PlaytimeRewards:
+  # 启用或禁用游戏时间奖励
+  # 如果您想要自动奖励，则需要此选项
+  Enabled: false
+  # 启用后，当玩家处于 AFK 模式时，可重复的游戏时间奖励不会增加游戏时间
+  # 注意！如果您将 Afk.StopPlayTime 设置为 true，则此设置不会产生任何效果
+  # 当 StopPlayTime 设置为 true 时，AFK 将自动排除
+  ExcludeAfk: false
+  # 定义通知玩家有待领取奖励的时间（分钟）
+  RewardInform: 15
+  # 定义要在列表中显示的一次性奖励数量
+  # 这将从您当前的游戏时间显示接下来 X 数量的奖励
+  # 如果玩家仍然很远，列出所有奖励没有意义
+  OneTimeAmount: 2
+  # 设置为 true 时，玩家需要拥有 cmi.prewards.[名称] 权限节点才能获得特定的游戏时间奖励
+  RequiresPermission: false
+
+# 睡眠设置
+Sleeping:
+  Speedup:
+    # 设置为 true 时，玩家可以通过在床上睡觉来加速夜晚
+    # 这将允许根据该世界中有多少玩家在床上睡觉来按百分比加速夜晚
+    Enabled: true
+    # 应应用此功能的世界列表
+    # 请注意，时间加速仅适用于普通类型的世界，默认情况下您只有一个
+    # 如果要包含所有可能的世界，请将此列表设置为 []
+    Worlds: []
+    # 设置为 true 时，时间仅在 12542 和 24000 刻之间加速
+    # 设置为 false 时，玩家可以在暴风雨或其他事件期间加速白天
+    OnlyDurringNight: true
+    # 夜晚开始的时间
+    # 这是以刻为单位，因此 12542 将是 18:32:00
+    NightStartsAt: 12542
+    # 加速信息的类型，可以是：none, title, bossbar
+    InfoType: title
+    # 设置为 true 时，处于 AFK 模式的玩家将被排除在速度计算之外
+    ExcludeAfk: true
+    # 定义度过夜晚的速度，数字越大，速度越快，度过夜晚所需的玩家越少
+    # 100 将使时间快 100 倍
+    BaseSpeed: 100
+    # 定义度过夜晚的最小速度，这是在有比基本速度更多的玩家并且计算返回默认速度的情况下
+    MinSpeed: 5
+    # 开始加速前床上睡觉的最小玩家数量
+    # 可以用两种格式定义。当使用干净的数字如 3 时，则需要有 3 名玩家睡觉才能开始加速
+    # 如果数量定义为 % 如 50%，则需要有一半的服务器人口睡觉才能开始加速
+    MinBeforeSpeeding: 50%
+    # 设置为 true 时，在线玩家将收到关于缺少睡觉人数的信息
+    Inform: true
+    # 玩家开始或停止睡觉时可以显示信息消息之间的时间（秒）
+    InformDelay: 30
+
+# 指南针设置
+Compass:
+  # 启用实验性的 Boss 栏指南针
+  # 仅适用于 1.9+ 服务器
+  BossBar: false
+  # 需要手持指南针才能看到它
+  RequireCompass: false
+  # 启用后，当涉及显示 Boss 栏的指南针要求时，我们将恢复指南针作为常规指南针
+  RecoveryAsRegular: false
+  # 需要手持恢复指南针才能在 Boss 栏中看到死亡位置
+  RequireRecoveryCompass: false
+  # 指南针更新间隔（毫秒）
+  UpdateInterval: 200
+  # 保持每个方向之间的间距相同。长度可以是任意您想要的
+  Shape: '------------SW-------------W-------------NW-------------N-------------NE-------------E-------------SE-------------S-'
+  Color: '&7'
+  ShowHome: true
+  Home: ۩
+  ShowSpawn: true
+  Spawn: ⤋
+  ShowDeath: true
+  Death: ☠
+  ShowCompassTarget: true
+  CompassTarget: ꖴ
+  # 仅适用于 1.16+ 服务器
+  # 定义从一个方向到另一个方向的颜色过渡
+  Gradient:
+    Use: true
+    SouthColor: white
+    WestColor: orange
+    NorthColor: vulcan
+    EastColor: bitter_lemon
+
+# 漏洞修补设置
+ExploitPatcher:
+  # 启用后，这将防止经验瓶在传送门边缘被破坏并因此复制它们
+  PreventExpPortals: true
+  # 启用后，这将防止玩家执行可能导致某些错误的命令
+  # 默认情况下禁用以保持原始行为，但建议启用它以避免问题
+  NoCommandsInBed: false
+  # 由于与过大的书有关的主要漏洞，建议启用此功能
+  # 启用后，玩家将受到限制，无法创建过多页面
+  # 限制由 cmi.book.pages.§f[20to100]§6 权限节点确定，默认情况下玩家可以创建 20 页
+  LimitBooks: true
+  # 启用后，我们将防止物品通过末地传送门和末地信标传送
+  BlockEndPortalItemTransfers: true
+  # 启用后，当玩家将天气设置为雨而玩家世界处于晴朗状态时，我们将不允许使用激流
+  Riptide: true
+  Placeholders:
+    blocked:
+      # 默认情况下，我们阻止 PAPI %checkitem_...% 占位符以避免潜在的严重问题
+      # 只有您有专门的保护时才禁用此功能
+      checkItem: true
+
+# Vault 设置
+Vault:
+  # 如果在获取正确的玩家组或余额时遇到问题，请考虑将其设置为 false
+  Money: true
+  Group: true
+
+# 价值设置
+Worth:
+  # 定义将阻止使用 /cmi sell 出售物品的描述
+  # 忽略颜色代码和大小写
+  BadLore:
+    - Creative item by Gasha
+  # 如果启用，任何带有自定义名称的物品将不允许使用 /cmi sell 命令出售
+  CustomNameBlocking: false
+  # 如果启用，任何带有自定义描述的物品将不允许使用 /cmi sell 命令出售
+  LoreBlocking: false
+  # 启用后，我们将不允许出售未完全修复的物品
+  RequireFullDurability: false
+  # 启用后，耐久度未满的物品价值会降低。剩余 30% 耐久度将使物品价值下降 70%
+  # 这仅在 RequireFullDurability 禁用时有效
+  DevalueByDurability: false
+  AutoGenerate:
+    # 根据其成分价值自动计算物品价格时，应添加到最终产品的价值百分比
+    # 例如，一根木棍价值 0.1，钻石价值 44，那么最终结果如钻石锄将价值 88.2，加上额外的 2% 将变为 89.96
+    # 值可以为负
+    PriceIncrease: 0
+
+# Boss 栏设置
+BossBar:
+  # 在 1.9+ 服务器上启用或禁用 Boss 栏生命值条
+  # 只有拥有 cmi.bossbar.hpbar 权限节点的玩家才能看到它
+  # 出于效率考虑，权限节点重新检查的频率不超过每分钟一次
+  HpBarEnabled: true
+  # 将从生命值 Boss 栏中排除的生物类型列表
+  HpBarBlackList:
+    - Ender_dragon
+
+# 封禁设置
+Ban:
+  # 设置为 true 时，被封禁的玩家将看到由 CMI 修改的消息，而不是看到原始类型的消息
+  OverrideLoginMessage: false
+
+# 重生设置
+ReSpawn:
+  # 玩家重生后使其无敌的时间（秒）
+  # 可用于防止重生蹲守
+  # 如果要禁用，请设置为 0
+  # 最大 60 秒
+  Immortality: 3
+  # 如果您希望第三方插件处理玩家重生，只需将其设置为 false 并重新加载插件
+  Enabled: true
+  Global:
+    # 如果定义的世界未出现在特定列表中，则定义重生顺序
+    # 可能的重生位置：anchor, bedLocation, spawn, homeLocation, worldSpawn, warp![warpName]
+    # Spawn 是使用 /cmi setspawn 命令预设的重生位置，该位置应将 RespawnLocation 设置为 true
+    # bedLocation 是通过与床交互设置的位置，BedInteraction 应设置为 false，玩家需要 cmi.bedhome 来设置床位置
+    # homeLocation 是玩家设置的具有默认（Home）名称的位置，如果该位置不存在，则如果可能，将使用列表中的第一个
+    # worldSpawn 是预设到此世界的位置，这不是 CMI 位置，而是默认的世界重生位置
+    # anchor 是通过与重生锚交互定义的位置。这通常仅适用于您在下界世界中死亡时，否则使用床位置
+    # warp![warpName] 可以是您为玩家传送设置的任何有效传送点，它们将绕过该传送点的任何要求
+    PriorityOrder:
+      - anchor
+      - bedLocation
+      - spawn
+      - homeLocation
+      - worldSpawn
+  # 为定义的世界定义重生顺序
+  # 将重生优先级设置为 [] 或随机重生条件，如果您想将重生处理留给服务器或第三方插件
+  Specific:
+    world:
+      - anchor
+      - bedLocation
+      - spawn
+      - homeLocation
+      - worldSpawn
+    world_nether:
+      - anchor
+      - bedLocation
+      - spawn
+      - homeLocation
+      - worldSpawn
+    world_the_end:
+      - anchor
+      - bedLocation
+      - spawn
+      - homeLocation
+      - worldSpawn
+
+# 全息图设置
+Holograms:
+  # 定义检查玩家是否进入全息图触发区域的频率（毫秒）
+  # 更大的数字可以帮助稍微降低服务器负载
+  # 这不是必须保持较低数字的
+  CheckInterval: 2000
+  Defaults:
+    # 全息图的默认视图范围
+    # 这定义了从多远全息图将出现在玩家面前或何时消失
+    viewRange: 16
+    # 定义默认更新间隔
+    # 此数字越大，性能越好
+    updateRange: 8
+    updateInterval: 0.0
+    # 定义默认页面更改间隔
+    # 当值设置为 0 或更低时，页面将不会更改
+    pageChangeInterval: 0.0
+    # 定义我们是从起始位置向上还是向下放置行
+    placeUp: true
+
+# 投票设置
+Votifier:
+  # 设置为 true 时，将计算玩家的投票数
+  CountVotes: true
+  # 一个 IP 在最近 24 小时内可以投票的次数
+  # 设置为 0 表示无限制
+  MaxVotesInADay: 0
+  # 同一服务之间的投票冷却时间
+  # 在大多数情况下，投票服务将有自己的冷却时间设置
+  # 但如果您需要额外的冷却时间来防止快速投票，您可以在此处定义时间（秒）
+  GeneralCooldown: 0
+  # 设置为 false 时，成功投票时将不执行命令
+  PerformCommands: true
+  # 定义玩家投票时要执行的命令
+  # 支持专用命令和占位符
+  # 可以使用 [serviceName] 变量插入地址
+  CommandsOnVote:
+    - cmi broadcast !&6[playerDisplayName] &evoted!
+    - cmi give [playerName] diamond
+  # 如果您不想提供额外奖励，请保持为 false
+  ExtraRewardsEnabled: false
+  # 当玩家收集到确定数量的投票时执行的命令
+  ExtraRewards:
+    '10':
+      - cmi heal [playerName]
+      - cmi money give [playerName] 100
+    '100':
+      - cmi heal [playerName]
+      - cmi money give [playerName] 1000
+      - cmi give [playerName] diamond 32
+  # 从顶级投票者列表中排除的玩家列表
+  ExcludeList:
+    - None
+
+# 等级设置
+Ranks:
+  # 如果设置为 true，我们将通过玩家对权限节点的访问权限来检查玩家的等级，并优先考虑任何比当前等级具有更高权重的等级
+  # 这意味着，如果玩家有权访问第三等级，而记录的是第一等级，我们将优先考虑第三等级
+  # 启用后，使用诸如 /cmi setrank 之类的命令会将玩家的等级设置为他有权访问的最高等级，因此只要玩家有权访问第三等级，您就不能低于此等级，
+  # 您必须通过删除权限节点来删除对特定等级的访问权限，然后尝试降低他的等级
+  PermissionCheck: false
+  # 定义插件重新计算玩家组的频率（分钟）
+  # 保持为 0 将禁用此功能
+  Recalculation: 0
+  AutoRankUp:
+    # 定义插件检查可能玩家升级的频率（秒）
+    # 设置为 0 或更小以禁用自动升级检查
+    Delay: 60
+    # 实验性。设置为 true 时，玩家升级检查将在异步模式下完成
+    # 如果与此功能相关的错误，请将其关闭并将错误日志报告到 GitHub
+    Async: false
+    # 定义每个单独玩家被检查升级的频率（秒）
+    # 这与一般检查不同，只是为了避免几个玩家同时升级
+    # 这还定义了玩家将收到可能升级通知的频率，并且每次玩家收到通知时都会按比例增加，以避免在聊天中产生烦人的垃圾邮件
+    # 保持时间比一般延迟时间长或相同
+    PlayerDelay: 120
+    # 在等级信息窗口中启用或禁用进度条
+    progressBar: true
+  # 设置为 true 时，命令 /cmi ranklist 将输出您的升级路径中的等级，这将排除来自不同路径或不同升级树的所有等级
+  # 设置为 false 时，将显示列表中的所有设置等级
+  ListSamePathOnly: false
+  EffectUp: GColumn
+  # 设置为 true 时，涉及时间的要求将以短格式显示，如"50 小时"而不是"2 天 2 小时"
+  OnlyHours: false
+  # 当 OnlyHours 设置为 true 时，您可以在输出消息中添加分钟，而不是显示分数。因此，您可以拥有"5 小时 30 分钟"而不是 5.5 小时
+  includeMinutes: true
+
+# 告示牌设置
+Signs:
+  # 定义检查玩家是否进入动态告示牌触发区域的频率（毫秒）
+  # 更大的数字可以帮助稍微降低服务器负载
+  # 这不是必须保持较低数字的
+  CheckInterval: 3000
+  # 定义无法通过按住 Shift 右键单击编辑的告示牌顶行列表
+  # 通常用于防止商店告示牌修改
+  editBlackList:
+    - '[Shop]'
+  # 启用后，玩家需要潜行才能编辑告示牌
+  RequireSneaking: false
+
+# 皮肤设置
+Skins:
+  # 如果玩家尚未设置皮肤，则在登录服务器时自动将皮肤应用于玩家
+  # 这将始终设置为目标玩家名称的皮肤
+  AutoApply: false
+  # 在关闭皮肤时将玩家皮肤设置为 Steve，并让服务器处理它
+  # 如果为 false，则皮肤将更改为在线皮肤
+  SteveOnOff: true
+  # 请求玩家对该皮肤具有特定权限 cmi.command.skin.perm.[skinName]
+  RequireSpecificPerm: false
+  # 定义从在线 Mojang 服务器更新皮肤信息的频率（分钟）
+  # 因此，如果您将其设置为 1 小时，则如果玩家的旧皮肤信息早于 1 小时，则将更新玩家皮肤信息
+  # 这仅在玩家加入服务器或手动更改皮肤时触发
+  SkinUpdateTimer: 1320
+
+# 警报设置
+Alert:
+  # 执行 /cmi alert 命令时，我们希望保持对玩家设置警报的分钟数。默认为 24 小时
+  Timer: 1440
+
+# 注释设置
+Notes:
+  # 启用后，当登录的玩家设置了警报时，工作人员将收到通知，该玩家有一些附加的注释
+  ShowOnAlertEvent: true
+
+# 地面清理设置
+GroundClean:
+  WhiteList:
+    # 地面清理操作中不会移除的物品类型列表
+    Material:
+      - itemType
+    # 地面清理操作中不会移除的物品类型列表
+    EntityType:
+      - entityType
+
+# 命令设置
+Command:
+  CommandFilter:
+    Duplicate:
+      # 设置为 true 时，插件将防止在短时间内重复发送相同或类似的命令。可以通过 cmi.commandfilter.bypass 权限绕过
+      Use: false
+      # 命令被视为相同的百分比
+      Percentage: 80
+      # 定义您可以发送相同/类似命令的频率（秒）
+      Interval: 5
+      # 在因冷却而停止之前可以重复的命令数量
+      MinAmount: 2
+      # 要忽略的白名单命令
+      WhiteList:
+        - msg
+        - tell
+        - login
+        - register
+    # 命令垃圾邮件监听器的优先级
+    # 更改优先级仅在完全服务器重启后生效
+    # 可能选项: LOWEST, LOW, NORMAL, HIGH, HIGHEST
+    # 默认: LOW
+    Priority: LOW
+  Spy:
+    # 出于安全/隐私原因，启用命令间谍时不会显示此列表中的命令
+    # 可以通过 cmi.command.commandspy.bypass 权限节点绕过
+    BlackListed:
+      - register
+      - login
+      - l
+    # 没有 cmi.security.admin 的玩家只能通过命令间谍功能看到此列表中的命令
+    # 保持为空将包括所有命令，黑名单中的命令除外
+    CommandList: []
+  Notes:
+    # 保留玩家注释的天数
+    ExpiresIn: 30
+  Mail:
+    # 保留玩家邮件的天数
+    ExpiresIn: 30
+    # 向所有玩家发送邮件将发送给最近 x 天内登录服务器的玩家
+    mailAllDays: 7
+    # 我们应为每个玩家保留多少邮件
+    # 当邮件限制达到时，最旧的邮件将被删除
+    MaxMails: 50
+    # 从控制台执行命令时的邮件发件人名称
+    # 此名称将用作指示谁发送了它，以及如果玩家回复，谁应该收到回复
+    # 为了获得最佳体验，请将此值设置为负责与玩家通信的工作人员
+    ConsoleMailSender: server
+
+# 显示名称设置
+DisplayName:
+  # 如果您有第三方插件更改玩家的显示名称，请将其设置为 false
+  Change: true
+  # 玩家显示名称的格式。默认情况下，仅昵称可见（如果已设置），如果未设置，则为玩家名称
+  # 可能的自定义变量: {prefix} {suffix} {nicknameprefix}
+  # 支持占位符
+  Format: '{nickName}'
+  # 定义有效昵称的正则表达式
+  # 默认情况下，只允许字母和数字
+  # 如果要允许任何语言的任何字母，请使用 [^\p{L}0-9\-\_]
+  ValidNicknameRegex: '[^a-zA-Z0-9\-\_]'
+
+# 昵称设置
+NickName:
+  # 防止玩家在没有权限的情况下将其昵称更改为已定义的名称之一
+  # 使用小写
+  # cmi.command.nick.bypassblacklist
+  # 要绕过对已使用名称/昵称的保护，请使用 cmi.command.nick.bypassinuse
+  BlackList:
+    - admin
+    - administrator
+    - server
+    - staff
+    - staf
+  # 昵称的最小长度，可以通过 cmi.command.nick.bypass.length 绕过
+  MinLength: 4
+  # 昵称的最大长度，可以通过 cmi.command.nick.bypass.length 绕过
+  MaxLength: 16
+  # 为玩家的昵称添加前缀以指示这不是真实名称。这可以通过 {nicknameprefix} 添加到显示名称中
+  Prefix: '~'
+  # 为 true 时，仅当与原始名称不同时才添加昵称前缀。这允许在不添加前缀的情况下进行着色或大写更改
+  PrefixWhenDifferent: false
+  TabComplete:
+    # 为 true 时，选项卡自动完成中将使用在线玩家的昵称而不是真实名称
+    ReplaceReal: true
+    # 为 true 时，我们将在昵称之上包含真实名称。这仅在 ReplaceName 启用时有效
+    IncludeReal: false
+
+# 染色设置
+Dye:
+  # 设置为 true 时，彩色皮革盔甲将绑定到接收该颜色的玩家，如果他将它给予他人，则对他人无效
+  # 仅适用于动态盔甲颜色，如生物群系、生命值等
+  BoundToPlayer: false
+
+# 在登录时显示是否有可用的新版本（具有 cmi.versioncheck 权限节点）
+ShowNewVersion: true
+
+# 刷怪笼设置
+Spawners:
+  # 如果在处理刷怪笼时遇到问题，请将其设置为 true 以避免 CMI 方面的任何刷怪笼操作
+  # 这将禁用诸如刷怪笼放置、刷怪笼掉落、刷怪笼充能等功能
+  FullDisable: false
+  Break:
+    # 注意！需要 cmi.dropspawner 才能获得刷怪笼掉落
+    # 启用或禁用刷怪笼破坏的刷怪笼处理程序
+    # 如果启用，玩家在使用带精准采集的镐并拥有 cmi.dropspawner 权限节点时将获得刷怪笼
+    # 如果玩家拥有 cmi.dropspawner.nosilk 权限节点，则玩家不需要使用带精准采集的镐来获得掉落的刷怪笼
+    Enabled: false
+    # 启用后，刷怪笼不会掉落在地上，而是直接放入玩家的库存中
+    # 如果库存已满，则物品将掉落在地上
+    IntoInventory: false
+    # 如果设置为 true，玩家需要拥有特定的权限节点才能破坏和获得特定的刷怪笼
+    # 例如：玩家应拥有 cmi.dropspawner.pig 才能破坏猪刷怪笼并获得它，或 cmi.dropspawner.zombie 以获得僵尸刷怪笼
+    RequiresExactPermission: false
+    # 设置为 false 时，无论刷怪笼本身是否被掉落，被破坏的刷怪笼都不会掉落经验
+    # 设置为 true 时，仅当刷怪笼未被掉落时才会掉落经验
+    DropExp: false
+    # 获得刷怪笼所需的最小精准采集等级
+    SilkTouchLevel: 1
+    # 破坏刷怪笼时掉落刷怪笼的百分比概率（0 到 100）
+    BaseDropChance: 100.0
+    StopDropping:
+      # 启用或禁用在一定数量的刷怪笼被开采后停止刷怪笼掉落
+      Enabled: false
+      # 玩家实际能够开采的刷怪笼数量，之后其掉落几率设置为 0
+      # 这是基于玩家开采刷怪笼的统计记录，这包括失败的掉落，因此请相应调整
+      # 权限如 cmi.dropspawner.stopafter.[正值] 可用于通过权限节点定义限制
+      After: 0
+      # 启用后，掉落几率将根据先前设置的值和玩家已开采的刷怪笼数量缓慢下降
+      # 在达到先前设置的值之前，这不会低于 1% 的掉落几率
+      Linear: false
+  Place:
+    # 启用或禁用刷怪笼放置的刷怪笼处理程序
+    # 如果启用，玩家将根据其类型放置刷怪笼
+    # 如果禁用，则刷怪笼将以正常方式放置，并允许其他插件处理其放置
+    Enabled: true
+    # 如果设置为 true，玩家需要拥有适当的权限节点才能按其类型放置刷怪笼
+    RequiresPermission: false
+    # RequiresPermission 应设置为 true 才能生效。如果设置为 true，玩家需要拥有特定的权限节点才能放置特定的刷怪笼
+    # 例如：玩家应拥有 cmi.placespawner.pig 才能放置猪刷怪笼，或 cmi.placespawner.zombie 才能放置僵尸刷怪笼
+    # 如果设置为 false，则玩家需要拥有基本的 cmi.placespawner 权限才能放置任何类型的刷怪笼
+    RequiresExactPermission: false
+  Interact:
+    Spawner:
+      # 设置为 true 时，尝试使用怪物蛋更改刷怪笼的玩家需要适当的权限节点
+      # 例如：玩家应拥有 cmi.egginteract.pig 才能将刷怪笼更改为猪，或 cmi.egginteract.zombie 才能更改为僵尸刷怪笼
+      RequiresPermission: false
+    TrialSpawner:
+      # 设置为 true 时，尝试使用怪物蛋更改试炼刷怪笼的玩家需要适当的权限节点
+      # 例如：玩家应拥有 cmi.trialegginteract.pig 才能将刷怪笼更改为猪，或 cmi.trialegginteract.zombie 才能更改为僵尸刷怪笼
+      RequiresPermission: false
+  # 如果设置为 true，刷怪笼在被 TNT 破坏时有几率掉落
+  TnTExplosionDrop:
+    use: false
+    # 刷怪笼掉落的几率百分比
+    Chance: 30
+  # 如果设置为 true，刷怪笼在被苦力怕破坏时有几率掉落
+  CreeperExplosionDrop:
+    use: false
+    Chance: 30
+  Charges:
+    # 启用后，拥有 cmi.spawners.charge.[组名] 权限节点的玩家将被分配到特定的刷怪笼充能组
+    # 玩家将限制他们可以开采的刷怪笼数量
+    # StartingCharge 将确定他们第一次加入组时将拥有的充能数量
+    # MaxCharge 将限制一次可以拥有的充能数量
+    # Cooldown 确定给予新充能的频率
+    # Bonus 是可选的，它将确定放置刷怪笼时减少下一次充能冷却时间的秒数
+    # 选项可通过 cmi.spawners.charge.bypass 绕过限制
+    Use: false
+    # 如果设置为 true，当玩家用完刷怪笼充能时，刷怪笼将被破坏而不掉落
+    BreakWithoutCharge: false
+    List:
+      Noob:
+        Use: false
+        StartingCharge: 2
+        MaxCharge: 5
+        Cooldown: 3600
+        Bonus: 10
+      Advanced:
+        Use: false
+        StartingCharge: 3
+        MaxCharge: 6
+        Cooldown: 3000
+        Bonus: 10
+  Proximity:
+    # 允许限制刷怪笼彼此放置的紧密程度
+    Use: false
+    # 从放置的方块起的半径（方块）。最大范围为 16
+    # 可以通过 cmi.spawners.proximity.bypass 绕过
+    Range: 3
+
+# 物品重命名设置
+ItemRenaming:
+  # 设置为 true 时，玩家将被拒绝在铁砧或使用 itemname 命令重定义定义的物品
+  # 选项可通过使用正则表达式格式定义特定名称
+  # 可以通过 cmi.anvil.itemrename.bypass 绕过
+  Prevent: false
+  # 设置为 true 时，物品重命名将被全局禁用，使用铁砧或命令，与重命名的材料无关
+  # 这可以通过先前的权限节点绕过
+  GlobalDisable: false
+  # 为 itemname 命令定义物品名称的最大长度（不包括颜色代码）
+  # 设置为 0 以取消限制
+  MaxLength: 64
+  Anvil:
+    # 启用后，当物品名称被着色时，我们将强制将其设置为斜体以模仿原始物品重命名
+    ItalicByDefault: true
+  # 启用后，我们还将检查源物品以及最终物品
+  # 这可以防止具有特定名称的物品被完全禁用重命名，并防止其他物品被重命名为它们
+  CheckSource: true
+  # 材料列表后跟可选的正则表达式代码，可以防止特定命名，例如将生物刷怪笼重命名为另一种类型，同时仍允许将刷怪笼重命名为任何其他名称
+  List:
+    - mobspawner:([A-z]+ (?i)\w*spawner)
+
+# 生成生物设置
+SpawnMob:
+  # 定义一次可以生成多少乘客实体
+  MaxQuantity: 25
+  MaxPassengers: 10
+
+# 计数器设置
+Counter:
+  # 执行 /counter start 时使用的默认范围
+  Range: 10
+
+# 镜像设置
+Mirror:
+  # 定义您可以在镜像中心多远的地方建造（方块）
+  # 这主要是为了防止忘记关闭镜像并开始在地图的不同一侧建造
+  MaxRange: 50
+  # 一次修改的最大方块数量
+  # 保持相对较低以避免由于每个方块需要单独检查而导致服务器不必要的负载
+  MaxBlocks: 16
+  # 禁用时，在镜像模式下不会破坏方块
+  # 这主要是为了防止此功能用于采矿目的而不是建筑
+  BreakDisabled: false
+
+# 下界传送门设置
+NetherPortal:
+  # 可以完全阻止下界传送门的创建。选项可通过 cmi.netherportalbypass 绕过
+  PreventCreation: false
+  # 可以创建的下界传送门的最大高度。原始大小为 23
+  MaxHeight: 23
+  # 可以创建的下界传送门的最大宽度。原始大小为 23
+  MaxWidth: 23
+
+# 传送门设置
+Portals:
+  # 定义检查玩家是否进入传送门的频率（毫秒）
+  # 更大的数字可以帮助稍微降低服务器负载，但小的传送门，1 方块深度没有后墙，如果玩家移动足够快，可以通过而不传送
+  CheckInterval: 300
+  # 定义检查玩家是否进入传送门范围以显示粒子的频率（毫秒）
+  CheckParticleInterval: 500
+  Defaults:
+    # 默认情况下，我们是否应执行没有设置目标位置的命令
+    # 这仅影响新创建的传送门区域
+    # 设置为 true 时，在创建传送门时，您可以进入它，并且将执行下面定义的命令，而不会将您传送到任何地方
+    # 这可以通过游戏内传送门编辑器为每个传送门独立更改
+    PerformCommands: true
+    # 传送事件时要执行的命令
+    Commands:
+      - cmi effect [playerName] blindness 2 1 -s
+
+# 动画设置
+Animations:
+  # 通过用空手单击楼梯块或通过查看和使用命令来启用坐在楼梯上
+  # 需要 cmi.command.sit.stairs
+  SitOnStairs: true
+  StairsAsChairs: true
+  SlabsAsChairs: true
+  CarpetsAsChairs: false
+  RemoveFromChairOnDamage: true
+  # 玩家只有在快速双击后才会坐在椅子上
+  DoubleClick: false
+  # 启用双击时坐在椅子上两次点击之间的延迟（毫秒）
+  DoubleClickDelay: 200
+  # 从玩家向上查找有效椅子块的范围（方块）
+  ChairRange: 4
+
+# 所有可能的伤害原因: kill, world_border, contact, entity_attack, entity_sweep_attack, projectile, suffocation, fall, fire, fire_tick, melting, lava, drowning, block_explosion, entity_explosion, void, lightning, suicide, starvation, poison, magic, wither, falling_block, thorns, dragon_breath, custom, fly_into_wall, hot_floor, campfire, cramming, dryout, freeze, sonic_boom
+# 语法应为 [permissionNode]:[damageCause]:[multiplier]
+# 示例: nolavadamage:lava:0 将通过 cmi.damagecontrol.nolavadamage 权限节点阻止熔岩伤害
+# 负值将治疗玩家而不是伤害他
+# 如果玩家对同一伤害原因有多个权限节点，则将使用列表中的最后一个来确定最终伤害
+DamageControl:
+  - nowalldamage:fly_into_wall:1
+  - lowermagmacubedamage:hot_floor:0.9
+
+# 图腾设置
+Totem:
+  # 设置为 true 时，即使玩家没有手持图腾，也会在玩家死亡时使用图腾
+  RemoveFromInventory: false
+  # 需要权限节点才能从库存中取出图腾
+  # RemoveFromInventory 应设置为 true，如果启用，玩家将需要 cmi.totem.frominventory
+  RequirePermission: false
+  Cooldown:
+    # 设置为 true 时，玩家只能每 X 秒使用一次图腾
+    Use: false
+    Time: 600
+  Warmup:
+    # 设置为 true 时，玩家可以使用图腾拥有 X 秒的时间，在此期间他可以死亡并复活
+    # 图腾将在激活期间被消耗，即使在预热时间内未使用复活也不会返回
+    Use: false
+    Time: 10
+  # 如果玩家在拥有图腾时掉入虚空，他将被传送到重生位置，并且图腾将被消耗
+  ProtectFromVoid: true
+  Effects:
+    # 需要应用于玩家的效果时间（秒）。设置为 0 以禁用
+    Regeneration: 45
+    FireResistance: 40
+    Absorbtion: 5
+  # 图腾处理将保留为服务器默认行为的世界
+  BlackListedWorlds:
+    - TestWorld
+    - DeathWorld
+  # 完全禁用图腾使用的世界
+  FullDisableInWorlds:
+    - YouDied
+
+# 鞘翅设置
+Elytra:
+  # cmi.elytra - 允许使用鞘翅
+  # cmi.elytra.boost - 允许使用助推
+  # cmi.elytra.superboost - 允许使用超级助推
+  # cmi.elytra.speedometer - 允许看到速度计
+  Boost:
+    # 玩家不会获得任何助推的最大速度
+    SpeedLimit: 200
+    # 启用后，如果玩家超过速度限制，物品/经验不会被消耗
+    SpeedLimitStop: false
+    # 是否在速度中显示小数
+    SpeedDecimals: true
+    # 每次使用时对玩家的助推量
+    GeneralMultyplier: 0.1
+    # 每次超级助推时对玩家的助推量
+    # 使用 Shift 同时使用简单助推
+    SuperMultyplier: 0.3
+    # 使用定义的物品而不是经验
+    UseItems: false
+    # 物品材料名称
+    # 定义每次助推事件将消耗的物品
+    ConsumedItem: STONE
+    # 物品材料名称
+    # 设置为 AIR 如果您想允许助推而不持有任何特定物品
+    # 请注意，当设置为 AIR 时，您仍然需要持有任何物品或单击鼠标左键才能工作
+    Item: FEATHER
+    # 物品材料名称
+    # 设置为 AIR 如果您想允许发射而不持有任何特定物品
+    # 请注意，当设置为 AIR 时，您仍然需要持有任何物品或查看方块才能正常工作
+    LaunchItem: FEATHER
+    # 需要手持定义的物品。仅在 UseItems 设置为 false 时
+    RequiresItem: true
+    # 每次助推消耗的经验量
+    Amount: 1
+    # 每次超级助推消耗的经验量
+    SuperAmount: 5
+    # 飞行时显示粒子
+    ShowParticles: true
+  Launch:
+    Time: 2
+  # 1.13+ 服务器。是否禁用鞘翅飞行时使用带有激流附魔的三叉戟
+  # 这种组合是危险的，因为如果允许使用，玩家可以达到极高的速度
+  DisableRiptide: false
+  Fix:
+    # 禁用在使用箭矢飞行时伤害自己以提升的选项
+    PreventSelfDamage: false
+    # 禁用在使用鞘翅飞行时使用火箭助推自己的选项
+    PreventRocketUsage: false
+
+# 飞行充能设置
+FlightCharge:
+  # 默认情况下，将显示 Boss 栏消息以及剩余充能。如果禁用，则 Boss 栏仅在飞行充能被修改时出现，而不是在飞行中耗尽时
+  ShowBossBar: true
+  # 设置为 true 时，每次玩家获得飞行充能或重新登录时，他的飞行模式将被切换开启
+  # 如果设置为 false，则玩家必须手动使用 /cmi flyc 开启飞行
+  EnabledByDefault: true
+  # 设置为 true 时，如果玩家将游戏模式从生存/冒险更改为创造/旁观，他的飞行充能模式将被禁用
+  # 同样适用于从创造/旁观更改为生存/冒险
+  AutoSwitch: false
+  # 一个充能点消耗的经验点数。值可以是小数，如 0.2，但不能等于或低于 0
+  # 设置为 0 以禁用此类型的充能
+  ExpRechargeCost: 1.0
+  # 一个充能点的成本。值可以是小数，如 0.2，但不能等于或低于 0
+  # 设置为 0 以禁用此类型的充能
+  MoneyRechargeCost: 1.0
+  # 定义玩家可以拥有的最大充能量
+  # 一次充能是飞行时移动的一个方块
+  # 如果玩家不移动，则每悬停一秒一次充能
+  MaxChargeLevel: 1000
+  # 玩家不移动但悬停时的乘数。每秒钟玩家悬停。
+  # 设置为 0 以禁用
+  DeductOnIdling: 1.0
+  # 如果此值高于 0，则玩家每秒飞行将失去定义的充能量，而不是移动的方块
+  # 设置为 0 以禁用，这将扣除移动方块的充能
+  DeductOnlyForTime: 0.0
+  AutoRecharge:
+    # 百分比值，当玩家使用 /autorecharge 命令启用自动充能时，我们应自动充能玩家的飞行充能
+    From: 10.0
+    # 我们需要充能的充能百分比值
+    # 25 将导致每次触发自动充能时充能允许的最大充能的 25%
+    Amount: 25.0
+  # 定义玩家坠落时扣除充能的乘数
+  # 这仅在玩家从高于 3 方块的高度坠落时有效
+  # 例如，如果玩家从 10 方块高度坠落，则 7 * 2 = 14 充能将

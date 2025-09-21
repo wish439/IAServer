@@ -1,0 +1,234 @@
+Chat:
+  ModifyChatFormat:
+    # 是否尝试修改聊天格式以按照定义的格式显示
+    # 如果禁用此选项且您有第三方插件处理聊天消息，如果发现聊天格式有任何问题，请考虑同时禁用 ClickHoverMessages 部分
+    Enabled: false
+    # 公共消息格式监听器的优先级
+    # 更改优先级仅在完全服务器重启后生效。可能选项: LOWEST, LOW, NORMAL, HIGH, HIGHEST
+    # 默认: NORMAL
+    Priority: LOWEST
+    # 设置为 true 时，常规和私密消息（不包括纯净消息）将在悬停时显示附加信息（支持 PlaceHolderAPI）并可点击进行快速回复
+    # 要更改发送消息时看到的默认悬停消息，请转到您的语言文件中的 Chat 部分
+    ClickHoverMessages: true
+  DiscordSRV:
+    # 启用对 DiscordSRV 插件的支持
+    Enabled: true
+    # 定义 discordsrv 中全局聊天频道的名称
+    GlobalChannel: global
+    # 指示符，可在聊天格式中用作 {discord}，表示消息来自 Discord 而不是游戏内
+    Label: '&2[&7D&2]'
+    UnlinkedLabel: '&4[&cD&4]'
+    # 启用后且您启用了范围消息，我们将把所有消息发送到 DiscordSRV
+    # 禁用后，只有喊叫消息和具有 cmi.chat.rangebypass 权限节点的玩家发送的消息才会在 Discord 中可见
+    RangedMessages: true
+  # 启用对 DynMap 网络聊天的支持
+  DynMapChat: true
+    # 设置为 false 时，每次使用 /r 时，您将回复之前直接发送消息的人，或者如果没有之前的对话，则回复向您发送消息的人
+  # 设置为 true 时，使用 /r 的玩家将回复最后发送私密消息的人。当收到多个玩家的私密消息时使用 /r 可能会导致混淆
+  ReplyToLastMessenger: false
+    # 如果 ReplyToLastMessenger 设置为 false，则将考虑超时时间来决定您应该回复谁
+    # 如果您在过去 120 秒（默认）内有对话，那么即使收到第三方的消息，您仍将回复原始玩家
+  # 如果您的对话时间超过 120 秒，那么您将回复最后向您发送消息的人
+  LastMessengerTimeOut: 120
+  # 设置为 true 时，玩家需要拥有 cmi.command.msg.[组名].send 权限，其中 [组名] 是接收者的主要权限组
+  PrivateMessagesGroups: false
+  # 设置为 false 时，聊天中的网页链接将不会缩短为默认的 [链接] 格式
+  TranslateLink: true
+  # 定义用短词替换聊天中 URL 时的正则表达式
+  # 示例:
+  # (https?:\/\/(?:www\.|(?!www))[a-zA-Z0-9][a-zA-Z0-9-]+[a-zA-Z0-9]\.[^\s]{2,}|www\.[a-zA-Z0-9][a-zA-Z0-9-]+[a-zA-Z0-9]\.[^\s]{2,}|https?:\/\/(?:www\.|(?!www))[a-zA-Z0-9]\.[^\s]{2,}|www\.[a-zA-Z0-9]\.[^\s]{2,})
+  # ((http|https|ftp|ftps)\:\/\/)?[a-zA-Z0-9\-]+\.[a-zA-Z]{2,3}(\/\S*)?
+  # ((http|https|ftp|ftps)\:\/\/)?[a-zA-Z0-9\-]+\.[a-zA-Z]{2,3}(\/\S*)?([^\s]+)
+  LinkRegex: (^| )((http|https|ftp|ftps)\:\/\/)?[a-zA-Z0-9\-]+\.[a-zA-Z]{2,3}(\/\S*)?([^\s|^\)]+)
+  HoverItems:
+    # 设置为 true 时，聊天中的特定变量将转换为玩家手持的物品。变量列表如下
+    Enabled: true
+    # 定义用玩家手中物品信息替换聊天中物品行时的正则表达式。仅当启用 CMI 悬停聊天格式时有效
+    ItemRegex:
+      - (\[item\])
+      - (([&§]\S)+)?\[(([&§]\S)+)?i(([&§]\S)+)?t(([&§]\S)+)?e(([&§]\S)+)?m(([&§]\S)+)?\]
+  Bungee:
+    # 注意！这需要您拥有 CMI Bungee 插件，可在 zrips.net 找到
+    # 或直接下载 https://www.zrips.net/cmi/
+    # 是否要通过 Bungeecord 启用私密消息
+    # 需要启用 Bungeecord 支持才能生效
+    Messages: true
+    # 是否要通过 Bungeecord 启用公共消息
+    # 玩家需要拥有 cmi.bungee.publicmessages.[服务器名] 权限节点才能向目标服务器发送消息
+    PublicMessages: true
+    # 启用后，针对单个玩家的公共消息将被忽略，不会通过网络发送
+    # 这仅适用于当有多个玩家在线且聊天范围设置为全局时
+    PublicMessagesSingleIgnore: false
+    # 是否要通过 Bungeecord 启用管理消息
+    StaffMessages: true
+  # 用于简单聊天消息。可选变量: {displayName} {world} {prefix} {suffix} {group} {shout} {shoutcolor} {message} {nicknameprefix}。支持 PlaceHolderAPI 变量，如 %player_server% %cmi_user_chatcolor%
+  # 注意！不要对 {message} 变量使用渐变颜色，如果想对其应用渐变，请使用 GeneralMessageFormat 部分
+  GeneralFormat: '{prefix}&f{displayName}&7: &r{message}'
+  # 将定义消息格式本身，这允许在消息中使用渐变
+  # 它必须包含 {message}，否则我们将忽略此设置
+  # 对于 1.16+ 服务器，您可以使用颜色渐变，如 '{#b3a28f>}{message}{#d7b8e6<}'
+  # 您可以在渐变中使用超过 2 种颜色。要定义它，请重复 {message} 变量。例如 '{#b3a28f>}{message}{#5c6999<>}{message}{#d7b8e6<}'
+  # 使用 %cmi_user_chatcolor% 添加玩家选择的聊天颜色
+  GeneralMessageFormat: '{message}'
+  Ranged:
+    # 定义常规消息的传播范围
+    # 设置为 -1 以禁用范围限制
+    General: -1
+    # 定义喊叫消息的传播范围
+    # 喊叫消息应以 ! 开头，玩家应具有 cmi.chat.shout 权限
+    # 应启用 GeneralRange
+    # 设置为 0 可在所有世界中喊叫，-1 禁用
+    Shout: 200
+    # 用作喊叫聊天消息基础的颜色代码
+    ShoutColor: ''
+    # 定义每条喊叫消息的成本
+    ShoutCost: 0
+    # 消息范围限制列表
+    # 玩家数量后跟范围
+    # 玩家数量定义从多少开始应使用此范围
+    Dynamic:
+      Use: false
+      Limits:
+        - 1-0
+        - 10-1000
+        - 20-500
+        - 30-400
+        - 40-300
+        - 50-200
+  # 用于指示消息应发送到公共聊天而不是当前玩家聊天室的前缀
+  # 如果希望禁用此功能，请将其设置为空字段
+  ChatRoomShout: '!'
+  # 希望聊天室在删除前保持存活的秒数
+  # 这仅适用于最后一个用户离开后的空房间
+  ChatRoomLife: 3600
+  # 定义点击公共、私密和类似消息时建议的命令。可以使用 [playerName]、[playerDisplayName] 和 [playerNickName] 来包含玩家名称
+  ClickSuggestions:
+    pubmsg: '/msg [playerNickName] '
+    privmsg: '/msg [playerNickName] '
+    staffmsg: '/msg [playerNickName] '
+    helpop: '/msg [playerNickName] '
+    chatroom: '/msg [playerNickName] '
+    discord: '/msg [playerNickName] '
+  # 定义点击玩家名称时由玩家执行的命令（每种类型一个命令）
+  # 定义此项后，ClickSuggestions 将更改为 Shift+左键点击操作以获取建议命令
+  # 命令以玩家身份执行，如果希望从控制台执行，请在开头添加 asConsole! 变量
+  ClickCommands:
+    pubmsg: ''
+    privmsg: ''
+    staffmsg: ''
+    helpop: ''
+    chatroom: ''
+    discord: ''
+  # 使用数字增量来区分不同的组。如果玩家拥有多个，则将使用数字较高的行
+  # 根据需要添加任意多行
+  # 使用 cmi.chatgroup.[id] 权限节点
+  # 权限示例: cmi.chatgroup.2
+
+  # 注意！不要对 {message} 变量使用渐变颜色，如果想对其应用渐变，请使用 GroupMessageFormat 部分
+  GroupFormat:
+    '1': '{prefix}&f{displayName}&f: &r{message}'
+    '2': '{prefix}&f{displayName}&7: &r{message}'
+    '3': '{prefix}&f{displayName}&8: &r{message}'
+  # 使用数字增量来区分不同的组。如果玩家拥有多个，则将使用数字较高的行
+  # 根据需要添加任意多行
+  # 使用 cmi.chatmessagegroup.[id] 权限节点
+  # 权限示例: cmi.chatmessagegroup.2
+  GroupMessageFormat:
+    '1': '{message}'
+    '2': '{message}'
+    '3': '{message}'
+  Colors:
+    PublicMessage:
+      # 如果设置为 true，则所有公共消息都将从颜色代码中过滤，并允许使用适当的权限节点为其着色
+      # cmi.colors.publicmessage.[颜色名称]
+      # 颜色: black(&0), darkblue(&1), darkgreen(&2), darkaqua(&3), darkred(&4), darkpurple(&5), gold(&6), gray(&7), darkgray(&8), blue(&9), green(&a), aqua(&b), red(&c), lightpurple(&d), yellow(&e), white(&f), magic(&k), bold(&l), strikethrough(&m), underline(&n), italic(&o), reset(&r)
+      Enabled: true
+      # 公共消息颜色监听器的优先级
+      # 更改优先级仅在完全服务器重启后生效。可能选项: LOWEST, LOW, NORMAL, HIGH, HIGHEST
+      # 默认: NORMAL
+      Priority: NORMAL
+    PrivateMessage: true
+    # 如果设置为 true，则 /me 消息将从颜色代码中过滤，并允许使用适当的权限节点为其着色
+    # cmi.colors.me.[颜色名称]
+    me: true
+    # 如果设置为 true，则颜色代码将从文本中删除，而不是在玩家没有该颜色的适当权限节点时保留它们
+    CleanUp:
+      publicmessage: true
+      privatemessage: true
+      me: true
+      signs: false
+      books: true
+      itemname: true
+      itemlore: true
+      # 检查玩家无法使用的颜色代码聊天时忽略的字符串列表。
+      # 这将绕过玩家的颜色代码限制，并允许使用特定的聊天格式
+      # 仅适用于公共和私密消息
+      WhiteList:
+        - '&c❤&7'
+    # 如果设置为 true，则玩家更改昵称时，昵称将从颜色代码中过滤
+    # cmi.colors.nickname.[颜色名称]
+    NickName: true
+    # 确定 /cmi chatcolor 命令的内容。玩家可以选择的内容将由 cmi.colors.publicmessage.[colorCode] 决定，并将在 %cmi_user_chatcolor% 占位符中使用
+    Picker:
+      - '&f'
+      - '&2'
+      - '&3'
+      - '&7'
+      - '&8'
+      - '&a'
+      - '&b'
+      - '&c'
+      - '&e'
+      - '&6'
+      - '{#00e625}'
+      - '{#brown}'
+  # 如果设置为 true，您忽略列表中的玩家的公共消息将不会显示
+  IgnorePublicMessage: true
+  Tag:
+    # 是否启用标签系统。这将在公共聊天中通知玩家他的名字被提及（如果名字前面有 @）
+    Enabled: true
+    # 设置为 true 时，公共消息中的任何玩家提及都将被着色，玩家将照常收到通知
+    # 这比通常使用 @ 的标签对服务器的负担要大得多，因此请在了解后果的情况下启用
+    HardCoreMode: false
+    # 确定聊天中带有 @ 的用户名/昵称的颜色。发送者应具有 cmi.tag.color
+    Color: '&c'
+    # 玩家被标记时要执行的命令
+    # 像 [playerName] 这样的变量将被替换为被标记的玩家名称
+    # 您可以使用 [senderName] 来包含标记的玩家名称
+    CommandsOnTag:
+      - asConsole! cmi sound BLOCK_NOTE_BLOCK_HARP:3:1 [playerName] -s
+    # 仅在玩家离开时执行标签命令
+    OnlyWhenAfk: false
+    # 设置为 true 时，将删除 @ 符号
+    RemoveEta: false
+ChatBubble:
+  # 是否要为公共消息启用聊天气泡
+  # 每个玩家可以通过 /options 命令 personally 禁用此功能
+  PublicMessages: true
+  # 聊天气泡监听器的优先级
+  # 更改优先级仅在完全服务器重启后生效
+  # 可能选项: LOWEST, LOW, NORMAL, HIGH, HIGHEST, MONITOR
+  # 默认: MONITOR
+  Priority: MONITOR
+  # 聊天气泡应显示的高度
+  Offset: 2.5
+  # 聊天气泡可见的基础时间（秒）
+  ShowFor: 5
+  # 气泡显示的最长时间
+  MaxShowFor: 10
+  # 消息中每个字母要增加的额外秒数
+  # 这将允许短消息的时间较短，并针对较长的消息增加时间
+  ExtraTime: 0.02
+  # 聊天气泡的缩放比例，默认为 1
+  PlateScale: 1
+  # 换行到新行前的行宽
+  LineWidth: 255
+  Background:
+    # 默认颜色代码，如果文本本身已着色，则可能会被覆盖
+    # 留空为默认透明颜色
+    # 颜色代码示例: {#black}
+    Color: '{#black}'
+    # 介于 0 和 1 之间的值，其中 0 表示无背景颜色，1 表示完全不透明
+    Opacity: 0.5
+  # 是否要添加文本阴影
+  Shadow: true
